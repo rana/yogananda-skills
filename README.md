@@ -1,0 +1,193 @@
+# SRF Cognitive Toolkit
+
+Cognitive infrastructure for the SRF Online Teachings Portal. 37 skills (31 analytical + 6 SRF mission), 9 workflow commands, and 4 SRF-specialized agents — shared across the team and autonomous agents.
+
+## What This Is
+
+Skills are prompt templates that shape how Claude thinks. Each skill examines from a different angle — threat modeling reasons from the actual architecture (Neon, Vercel, Sentry, AWS), not a generic checklist; gap analysis searches spatial dimensions, not just obvious omissions; archaeology excavates through layered questioning.
+
+Agents are SRF-specialized configurations that embed skill methodology with project-specific reading strategies (PRINCIPLES.md, DECISIONS body files, DES sections), identifier conventions (PRI-NN, ADR-NNN, DES-NNN, PRO-NNN), and domain vocabulary ("seekers" not "users", "teachings" not "content").
+
+## Here's the Relationship
+
+```
+SRF TEAM MEMBER                          AUTONOMOUS AGENTS
+───────────────                          ─────────────────
+claude plugin install                    .claude/agents/*.md
+  github:rana/srf-cognitive-toolkit        4 SRF-specialized agents
+  37 skills as                             embed skill methodology
+  /srf:skill-name.                         with project-specific
+  9 commands + 4 agents included.          reading strategies.
+
+PORTAL REPOSITORY                        PERSONAL DEVELOPMENT
+────────────────                         ────────────────────
+.claude/skills/                          ~/.claude/skills/
+  6 mission-specific skills                Same 31 skills available
+  checked into the portal repo.            as /skill-name in every
+  Team gets them on git clone.             project on your machine.
+```
+
+**Quick start:**
+
+| You are... | Do this |
+|------------|---------|
+| **SRF team member** | `claude plugin install github:rana/srf-cognitive-toolkit` |
+| **Building an autonomous agent** | Copy agents from `agents/` into your project's `.claude/agents/` |
+| **Working on the portal** | Skills are already in the portal repo's `.claude/skills/` |
+
+## Install
+
+```bash
+claude plugin install github:rana/srf-cognitive-toolkit
+```
+
+After installation: `/srf:deep-review`, `/srf:gaps`, etc.
+
+## Skills (37)
+
+### Review & Quality
+
+| Skill | Purpose |
+|-------|---------|
+| `deep-review` | Comprehensive multi-dimensional pre-implementation quality gate |
+| `review` | Unified pre-implementation gate (mission-align + coherence + gaps) |
+| `gaps` | Systematic search for omissions, blind spots, missing decisions |
+| `coherence` | Cross-document consistency and cross-reference integrity |
+| `verify` | Post-implementation spec-to-code fidelity check |
+| `doc-health` | Unified document health (identifiers + omissions + consistency) |
+| `garden` | Document identifier lifecycle maintenance |
+| `docs-quality` | Documentation practice quality review |
+| `crystallize` | Simplification and editorial sharpening |
+| `api-review` | API surface consistency and design review |
+
+### Security & Operations
+
+| Skill | Purpose |
+|-------|---------|
+| `threat-model` | STRIDE-based threat identification from actual architecture |
+| `hardening-audit` | Production hardening checklist from actual stack |
+| `launch-gate` | Pre-launch go/no-go across 11 dimensions |
+| `ops-review` | Operational readiness (deployment, costs, monitoring) |
+| `incident-ready` | Incident response readiness evaluation |
+| `supply-chain-audit` | Dependency and vendor risk audit |
+| `ghost` | Hidden dependency and assumption detector |
+
+### Thinking & Decision
+
+| Skill | Purpose |
+|-------|---------|
+| `archaeology` | Layered cognitive excavation (12 layers, selectable) |
+| `triad` | Dimensional tension analysis (11 lenses, selectable) |
+| `reframe` | Geometric cognitive reframing (negative/adjacent/orthogonal/parallel space) |
+| `steelman` | Strongest defense of current approach before proposing alternatives |
+| `inversion` | Systematic assumption flipping |
+| `consequences` | Forward-propagation analysis (2nd and 3rd order effects) |
+| `cognitive-debug` | Reasoning trace and correction |
+| `why-chain` | Root cause archaeology (recursive "why?") |
+
+### Implementation & Planning
+
+| Skill | Purpose |
+|-------|---------|
+| `scope` | Pre-implementation sizing and impact mapping |
+| `implement` | Design-to-code specification with file paths and signatures |
+| `context-switch` | Rapid reorientation to a different codebase area |
+| `tomorrow` | Future-self documentation (what will confuse you in 6 months) |
+| `drift-detect` | Detect unconscious architectural evolution |
+| `workflow-trace` | End-to-end workflow tracing for friction points |
+
+### SRF Mission
+
+| Skill | Purpose |
+|-------|---------|
+| `mission-align` | SRF principle alignment (verbatim fidelity, calm tech, DELTA, global equity) |
+| `seeker-ux` | Reading and seeker experience review (accessibility, helpfulness, spiritual uplift) |
+| `cultural-lens` | Cultural, spiritual, or demographic perspective audit |
+| `dedup-proposals` | Consolidate `.elmer/proposals/` explorations into curated PRO-NNN entries |
+| `proposal-merge` | Graduate PRO-NNN into ADR/DES edits across all project documents |
+| `theme-integrate` | Integrate new content themes into taxonomy, graph, and enrichment pipeline |
+
+## Commands (9)
+
+| Command | Purpose |
+|---------|---------|
+| `explore` | Deep multi-dimensional perspective |
+| `explore-act` | Same, biased toward action |
+| `calibrate` | Set session thinking parameters |
+| `commit` | Draft, stage, commit, push |
+| `park` | Save work state for later |
+| `resume` | Restore parked context |
+| `morning` | Daily development briefing |
+| `compose` | Chain skills in sequence |
+| `arc-gate` | Phase-appropriate quality gate |
+
+## Agents (4)
+
+SRF-specialized agents that embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
+
+| Agent | Embedded Skills | Purpose |
+|-------|----------------|---------|
+| `pre-impl-reviewer` | deep-review + gaps + threat-model | Quality gate before coding — go/no-go verdict |
+| `doc-maintainer` | doc-health + coherence + garden | Document integrity — PRI/ADR/DES/PRO audit, consistency, omissions |
+| `launch-readiness` | launch-gate + ops-review + incident-ready | Production readiness — 9-dimension go/no-go (Neon, Vercel, Sentry, AWS) |
+| `stakeholder-brief` | *(unique — no skill equivalent)* | Translate architecture into SRF stakeholder communication. Writes PROPOSAL.md with seeker stories, decision points, principle mapping. 1500 words, zero jargon. |
+
+**What makes these SRF-specific:**
+- Reading strategies reference PRINCIPLES.md, DECISIONS body files, DES-060, PROPOSALS.md
+- Identifier awareness: PRI-NN, ADR-NNN, DES-NNN, PRO-NNN systems
+- Stack grounding: Neon, Vercel, Sentry, AWS, DELTA compliance, axe-core
+- Vocabulary: "seekers" not "users", "teachings" not "content", "the portal" not "the application"
+
+**Usage:**
+```
+# In the portal repo
+cp agents/pre-impl-reviewer.md .claude/agents/
+
+# Spawn as a subagent
+Use the Agent tool with subagent_type matching the agent name
+```
+
+## Composition
+
+Skills compose via `/compose`. Order matters — perception-expanding before analytical, simplification last.
+
+```bash
+# Pre-implementation gate
+/compose srf:scope, srf:consequences, srf:deep-review : "the change"
+
+# Security sweep
+/compose srf:threat-model, srf:hardening-audit, srf:ghost : "the system"
+
+# Document health
+/compose srf:drift-detect, srf:doc-health, srf:crystallize : "the project"
+```
+
+Three is the sweet spot. Four+ risks context dilution. See SYSTEM.md for the full selection matrix and composition guide.
+
+## Environment Contract
+
+Skills produce the best output with the SRF portal's documentation architecture:
+
+| Document | What skills use it for |
+|----------|----------------------|
+| `CLAUDE.md` | Project rules, principles, identifier conventions |
+| `PRINCIPLES.md` | The 11 immutable commitments (PRI-01 through PRI-11) |
+| `CONTEXT.md` | Current state, open questions, methodology |
+| `DESIGN.md` | Architecture index; individual specs in `design/` |
+| `DECISIONS.md` | ADR index; bodies in DECISIONS-core/experience/operations.md |
+| `ROADMAP.md` | 3 arcs, milestones, M-notation deliverables |
+| `PROPOSALS.md` | PRO-NNN registry, graduation protocol |
+
+## Development
+
+```bash
+# After editing skills in ~/.claude/skills/, sync to plugin:
+./scripts/sync-from-source.sh
+
+# Preview what would be synced:
+./scripts/sync-from-source.sh --dry-run
+```
+
+## Trust Model
+
+Skills instruct Claude to use tools. You trust a skill as much as you trust its author with shell access. All skills are open source and fully auditable — they're text files, not compiled code.
