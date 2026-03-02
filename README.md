@@ -1,6 +1,6 @@
-# SRF Cognitive Toolkit
+# Yogananda Skills
 
-Cognitive infrastructure for the SRF Online Teachings Portal. 37 skills (31 analytical + 6 SRF mission), 9 workflow commands, and 4 SRF-specialized agents — shared across the team and autonomous agents.
+Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform). 37 skills (31 analytical + 6 SRF mission), 9 workflow commands, and 4 SRF-specialized agents — shared across projects, the team, and autonomous agents.
 
 ## What This Is
 
@@ -14,7 +14,7 @@ Agents are SRF-specialized configurations that embed skill methodology with proj
 SRF TEAM MEMBER                          AUTONOMOUS AGENTS
 ───────────────                          ─────────────────
 claude plugin install                    .claude/agents/*.md
-  github:rana/srf-cognitive-toolkit        4 SRF-specialized agents
+  github:rana/yogananda-skills        4 SRF-specialized agents
   37 skills as                             embed skill methodology
   /srf:skill-name.                         with project-specific
   9 commands + 4 agents included.          reading strategies.
@@ -31,14 +31,14 @@ PORTAL REPOSITORY                        PERSONAL DEVELOPMENT
 
 | You are... | Do this |
 |------------|---------|
-| **SRF team member** | `claude plugin install github:rana/srf-cognitive-toolkit` |
+| **SRF team member** | `claude plugin install github:rana/yogananda-skills` |
 | **Building an autonomous agent** | Copy agents from `agents/` into your project's `.claude/agents/` |
 | **Working on the portal** | Skills are already in the portal repo's `.claude/skills/` |
 
 ## Install
 
 ```bash
-claude plugin install github:rana/srf-cognitive-toolkit
+claude plugin install github:rana/yogananda-skills
 ```
 
 After installation: `/srf:deep-review`, `/srf:gaps`, etc.
