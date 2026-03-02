@@ -16,7 +16,7 @@ SRF TEAM MEMBER                          AUTONOMOUS AGENTS
 claude plugin install                    .claude/agents/*.md
   github:rana/yogananda-skills        4 SRF-specialized agents
   37 skills as                             embed skill methodology
-  /srf:skill-name.                         with project-specific
+  /y:skill-name.                            with project-specific
   9 commands + 4 agents included.          reading strategies.
 
 PORTAL REPOSITORY                        PERSONAL DEVELOPMENT
@@ -41,7 +41,7 @@ PORTAL REPOSITORY                        PERSONAL DEVELOPMENT
 claude plugin install github:rana/yogananda-skills
 ```
 
-After installation: `/srf:deep-review`, `/srf:gaps`, etc.
+After installation: `/y:deep-review`, `/y:gaps`, etc.
 
 ## Skills (37)
 
@@ -153,13 +153,13 @@ Skills compose via `/compose`. Order matters — perception-expanding before ana
 
 ```bash
 # Pre-implementation gate
-/compose srf:scope, srf:consequences, srf:deep-review : "the change"
+/compose y:scope, y:consequences, y:deep-review : "the change"
 
 # Security sweep
-/compose srf:threat-model, srf:hardening-audit, srf:ghost : "the system"
+/compose y:threat-model, y:hardening-audit, y:ghost : "the system"
 
 # Document health
-/compose srf:drift-detect, srf:doc-health, srf:crystallize : "the project"
+/compose y:drift-detect, y:doc-health, y:crystallize : "the project"
 ```
 
 Three is the sweet spot. Four+ risks context dilution. See SYSTEM.md for the full selection matrix and composition guide.

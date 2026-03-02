@@ -78,8 +78,8 @@ srf/
 ## Self-Maintenance
 
 ```bash
-/srf:doc-health           # identifier audit + consistency
-/srf:drift-detect         # stated vs actual architecture
-/srf:ghost                # hidden assumptions
-/srf:crystallize          # simplification opportunities
+/y:doc-health           # identifier audit + consistency
+/y:drift-detect         # stated vs actual architecture
+/y:ghost                # hidden assumptions
+/y:crystallize          # simplification opportunities
 ```
