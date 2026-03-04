@@ -1,8 +1,8 @@
 # SRF Cognitive Toolkit
 
-Cognitive infrastructure for the SRF Online Teachings Portal — 37 skills (31 analytical + 6 SRF mission), 9 commands, and 4 SRF-specialized agents. Shared across the SRF team and autonomous agents working on the portal.
+Cognitive infrastructure for the SRF Online Teachings Portal — 38 skills (32 analytical + 6 SRF mission), 9 commands, and 4 SRF-specialized agents. Shared across the SRF team and autonomous agents working on the portal.
 
-31 analytical skills are domain-agnostic (they analyze whatever project they're pointed at). 6 SRF mission skills are portal-specific (proposal management, mission alignment, seeker experience). Agents are SRF-specialized configurations that embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
+32 analytical skills are domain-agnostic (they analyze whatever project they're pointed at). 6 SRF mission skills are portal-specific (proposal management, mission alignment, seeker experience). Agents are SRF-specialized configurations that embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
 
 ## Skill Anatomy
 
@@ -69,7 +69,7 @@ srf/
 ├── SYSTEM.md                    # Human reference (selection matrix, composition guide)
 ├── README.md                    # Team usage guide
 ├── agents/                      # 4 SRF-specialized agents
-├── skills/                      # 37 skills (31 analytical + 6 SRF mission)
+├── skills/                      # 38 skills (32 analytical + 6 SRF mission)
 ├── commands/                    # 9 workflow commands
 └── scripts/
     └── sync-from-source.sh      # Sync from ~/.claude/ (for maintainers)

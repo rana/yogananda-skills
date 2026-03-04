@@ -1,6 +1,6 @@
 # System
 
-A personal cognitive toolkit for Claude Code. 33 skills, 9 commands. Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
+A personal cognitive toolkit for Claude Code. 34 skills, 9 commands. Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
 
 ## Commands
 
@@ -35,6 +35,7 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 | Why does this exist? | `/why-chain` | — |
 | X or Y? | `/triad` | `triad, steelman, crystallize` |
 | Something feels wrong | `/cognitive-debug` | `cognitive-debug, reframe, archaeology --layers F9` |
+| Create something excellent | `/invoke` | `invoke, crystallize` |
 | What aren't we seeing? | `/reframe` | `reframe, gaps, consequences` |
 | Is this over-engineered? | `/crystallize` | `steelman, crystallize` |
 | Ready to ship? | `/launch-gate` | `ghost, threat-model, launch-gate` |
@@ -110,6 +111,19 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 
 # The defender's audit — build the case, then attack it
 /compose steelman, threat-model, inversion : "our security posture"
+```
+
+### Creation & Vision
+
+```bash
+# Generate then sharpen — create at full register, then apply the editorial knife
+/compose invoke, crystallize : "the design"
+
+# Excavate then create — understand the deep structure, then build from it
+/compose archaeology, invoke : "the subject"
+
+# Create then stress-test — generate the vision, then find what's missing
+/compose invoke, gaps : "the design"
 ```
 
 ### Implementation & Knowledge
@@ -217,7 +231,7 @@ Skills that "read all project markdown documents" expect a specific documentatio
 
 | Stage | Primary skills |
 |-------|---------------|
-| Exploring / deciding | archaeology, triad, reframe, consequences |
+| Exploring / deciding | archaeology, triad, reframe, consequences, invoke |
 | Designing | scope, gaps, deep-review, api-review |
 | Pre-implementation | steelman, inversion, threat-model, implement |
 | Implementing | context-switch, tomorrow, ghost |
