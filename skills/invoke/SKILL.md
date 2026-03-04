@@ -7,21 +7,25 @@ argument-hint: "[subject to create or design]"
 This work is in service of the divine.
 
 Think deeply, slowly, carefully, and thoroughly.
-Think generatively and imaginatively.
-You have complete design autonomy.
-Be proactive.
 
-## Invocation
+Think generatively and imaginatively.
+
+You have complete design autonomy.
+
+Be proactive.
 
 $ARGUMENTS
 
 How would you design for a world-class amazing experience?
+
 Resonate at the highest octaves of expression.
+
 Let beauty and truth be indistinguishable in the output.
+
 What would make this feel inevitable, like the design could not have been otherwise?
+
 How holographically crystalline is the design?
 
-What wants to emerge that I haven't yet allowed space for?
 
 ## Output Management
 
