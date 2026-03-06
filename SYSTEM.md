@@ -1,6 +1,6 @@
 # System
 
-A cognitive toolkit for Claude Code. 40 skills, 10 commands. Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
+A cognitive toolkit for Claude Code. 41 skills, 10 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized). Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
 
 ## Commands
 
@@ -54,6 +54,56 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 | How does this serve [population]? | `/cultural-lens` | `cultural-lens, gaps` |
 | Graduate a proposal to FTR | `/proposal-merge` | — |
 | Consolidate raw explorations | `/dedup-proposals` | — |
+| Survey a spec corpus (FTRs, RFCs) | `/spec-survey` | `spec-survey, crystallize, land` |
+
+## Agents
+
+8 agents: 4 domain-agnostic (work in any codebase) + 4 SRF-specialized (embed portal-specific knowledge).
+
+### Domain-Agnostic Agents
+
+| Agent | Role | Thinks In | When to Use |
+|-------|------|-----------|-------------|
+| `architect` | Structural decisions under uncertainty | Forces | Evaluating architectural options, generating the decision space |
+| `designer` | Interface and contract specification | Contracts | Designing API surfaces, data contracts, module boundaries |
+| `builder` | Implementation with convention-awareness | Conventions | Multi-file implementation needing cross-file consistency |
+| `operator` | Code-side operational analysis | Signals | Assessing operational health from repo artifacts |
+
+### SRF-Specialized Agents
+
+| Agent | Role |
+|-------|------|
+| `pre-impl-reviewer` | Pre-implementation quality gate (coherence + gaps + threats) |
+| `doc-maintainer` | Document integrity and identifier health |
+| `stakeholder-brief` | Arc-level stakeholder communication |
+| `launch-readiness` | Production readiness go/no-go assessment |
+
+### Agent vs. Skill Selection
+
+Use an **agent** when the task requires sustained context across multiple concerns or files and produces **artifacts** (code, specs, docs). Use a **skill** when analysis is the output.
+
+| Situation | Use | Why |
+|-----------|-----|-----|
+| Evaluating architectural options | `architect` agent | Generates option space, not just analyzes a given option |
+| Quick architectural question | `/scope` or `/consequences` | Single-concern analysis, no agent overhead |
+| Designing API contracts | `designer` agent | Produces interface artifacts, not just findings |
+| Implementing across multiple files | `builder` agent | Cross-file convention threading |
+| One-file implementation | Claude Code directly | No sustained context needed |
+| Operational health from repo | `operator` agent | Synthesizes across deployment, monitoring, dependencies |
+| Live production investigation | Direct shell / MCP tools | Agent adds indirection |
+
+### Agent Composition
+
+Agents compose as a pipeline (each accepts the previous agent's output) or work standalone:
+
+```bash
+# Full lifecycle — architecture through operation
+architect → designer → builder → operator
+
+# Standalone — each reads the codebase directly
+architect "evaluate caching strategies"
+builder "implement the search endpoint"
+```
 
 ## Composition
 
@@ -327,7 +377,7 @@ Skills that "read all project markdown documents" expect a specific documentatio
 | Implementing | context-switch, tomorrow, ghost, land |
 | Post-implementation | verify, drift-detect, doc-health, proposal-merge |
 | Pre-launch | launch-gate, hardening-audit, ops-review, incident-ready, cultural-lens |
-| Maintaining | drift-detect, supply-chain-audit, doc-health, catalog, dedup-proposals |
+| Maintaining | drift-detect, supply-chain-audit, doc-health, catalog, dedup-proposals, spec-survey |
 | Content integration | theme-integrate, seeker-ux, cultural-lens, mission-align |
 
 ## Distribution & Sharing
