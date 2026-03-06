@@ -1,6 +1,6 @@
 ---
 name: doc-health
-description: Unified document health check combining identifier audit, omission search, and cross-document consistency in a single pass. Replaces running garden, gaps, and coherence separately — reads all documents once, threads findings across phases. Use for recurring document maintenance or pre-implementation review.
+description: Unified document health check combining identifier audit, omission search, and cross-document consistency in a single pass. Reads all documents once, threads findings across phases. Use for recurring document maintenance or pre-implementation review.
 argument-hint: "[optional focus area or 'greenfield']"
 ---
 

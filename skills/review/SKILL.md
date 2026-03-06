@@ -1,6 +1,6 @@
 ---
 name: review
-description: Unified pre-implementation quality gate. Runs mission-align + coherence + gaps in a single pass with prioritized output. Replaces invoking three skills separately.
+description: Unified pre-implementation quality gate. Runs alignment + coherence + gaps in a single pass with prioritized output.
 argument-hint: "[optional focus area or file/section to review]"
 ---
 
@@ -24,7 +24,7 @@ Focus on the top 3 most at-risk alignments unless $ARGUMENTS specifies otherwise
 
 For each misalignment: what goal or principle is at risk, where the issue is, the specific fix.
 
-### Dimension 2: Cross-Document Coherence (from /coherence)
+### Dimension 2: Cross-Document Coherence
 
 Check:
 - Cross-reference integrity (identifiers exist where referenced)
@@ -35,7 +35,7 @@ Check:
 
 For each inconsistency: what it is, which document is authoritative, the fix.
 
-### Dimension 3: Gap Analysis (from /gaps)
+### Dimension 3: Gap Analysis
 
 Search for:
 - Missing decisions (implicit assumptions needing ADRs)

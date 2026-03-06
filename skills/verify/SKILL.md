@@ -1,7 +1,7 @@
 ---
 name: verify
-description: Post-implementation fidelity check. Compare code against its governing DES/ADR specification. Verify all requirements are satisfied, tests cover the spec, and recommend document status updates. Closes the implement→verify loop.
-argument-hint: "[deliverable number, DES-NNN, ADR-NNN, or file path]"
+description: Post-implementation fidelity check. Compare code against its governing FTR specification. Verify all requirements are satisfied, tests cover the spec, and recommend document status updates. Closes the implement→verify loop.
+argument-hint: "[deliverable number, FTR-NNN, or file path]"
 ---
 
 Read the governing specification and examine the implementation code.
@@ -27,8 +27,8 @@ For each requirement in the specification:
 
 4. **Principle compliance** — Check against the governing principles:
    - Verbatim fidelity: No content generation, paraphrasing, or synthesis?
-   - API conventions (DES-019): Correct response shapes, pagination, language parameter?
-   - Named constants (ADR-123): Tunable values in `/lib/config.ts`, not inline?
+   - API conventions (FTR-015): Correct response shapes, pagination, language parameter?
+   - Named constants (FTR-012): Tunable values in `/lib/config.ts`, not inline?
    - Framework-agnostic services: `/lib/services/` has zero framework imports?
    - Multilingual foundation: `language` columns, `language` parameters?
 
@@ -47,9 +47,9 @@ For each requirement in the specification:
 ### Phase 4: Status Recommendations
 
 9. **Document updates** — Based on verification results:
-   - Should the DES/ADR status be updated to `Implemented — see [code path]`?
+   - Should the FTR state be updated to `implemented`?
    - Does the code diverge from the spec in ways that should be reflected back? (Update spec, not code, when the divergence is an improvement.)
-   - Are there findings that should become new ADRs, open questions, or PRO-NNN proposals?
+   - Are there findings that should become new FTR files, open questions, or proposed features?
 
 ## Output Format
 

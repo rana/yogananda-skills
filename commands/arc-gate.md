@@ -23,7 +23,7 @@ Code exists and is evolving. Focus: is the code drifting from the design?
 Run these skills in sequence, threading findings:
 1. **`/drift-detect`** — Compare stated architecture against actual code patterns
 2. **`/ghost`** — Hidden dependencies surfaced by real implementation
-3. **`/coherence`** — Cross-document consistency (focused on implemented sections)
+3. **`/deep-review`** — Cross-document consistency and gap detection (focused on implemented sections)
 4. **`/crystallize`** — Simplify what's accumulated during implementation
 
 ### Gate: `pre-launch`

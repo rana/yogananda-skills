@@ -1,6 +1,6 @@
 ---
 name: deep-review
-description: Comprehensive multi-dimensional pre-implementation quality gate. Combines coherence, gaps, errors, and cross-references in a single pass. Use before starting implementation or at phase boundaries.
+description: Broad hypothesis-free quality sweep. Combines coherence, gaps, and errors in a single pass. Use when you don't have a specific concern — for targeted analysis, compose specific skills instead (e.g., drift-detect for architecture, reframe + gaps for opportunities).
 argument-hint: "[optional focus area]"
 ---
 
@@ -8,7 +8,7 @@ Read all project markdown documents to ground in the project's actual state.
 
 ## Deep Multi-Dimensional Review
 
-This is the comprehensive quality gate. Check every dimension:
+The broad sweep — use when you don't know what's wrong and need a single pass across multiple dimensions. For targeted analysis, compose specific skills instead (`drift-detect, crystallize` for architecture, `reframe, gaps` for opportunities).
 
 ### Coherence
 - Cross-document alignment, identifier consistency, stated vs actual state
@@ -22,15 +22,6 @@ This is the comprehensive quality gate. Check every dimension:
 - Incorrect cross-references, stale information, broken assumptions
 - Wrong labels, associations, or identifiers
 - Diagram endpoints still valid? Identifier sequences correct?
-
-### Architecture
-- Pattern compliance, drift from stated principles
-- Emerging patterns that should be codified
-- Decisions that should be revisited given current state
-
-### Opportunities
-- Simplifications available? Capabilities underexploited?
-- Strategic gaps? Phase transitions that could be accelerated?
 
 Focus area: $ARGUMENTS
 

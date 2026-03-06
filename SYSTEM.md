@@ -1,6 +1,6 @@
 # System
 
-A personal cognitive toolkit for Claude Code. 34 skills, 9 commands. Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
+A cognitive toolkit for Claude Code. 40 skills, 10 commands. Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
 
 ## Commands
 
@@ -8,13 +8,14 @@ A personal cognitive toolkit for Claude Code. 34 skills, 9 commands. Skill defin
 |---------|---------|
 | `/explore` | Deep multi-dimensional perspective |
 | `/explore-act` | Same, biased toward action — produces change lists |
-| `/calibrate` | Set session thinking parameters (directness, resolution, mode, speculation, craft, output shape) |
+| `/calibrate` | Set session thinking parameters (directness, resolution, mode, speculation, craft, authority, output shape) |
 | `/commit` | Draft message, stage, commit, push |
 | `/park` | Save work state and mental context for later |
 | `/resume` | Restore parked context and present briefing |
 | `/morning` | Daily development briefing — branches, PRs, activity, suggested focus |
-| `/compose` | Chain skills in sequence, threading context forward |
+| `/compose` | Chain skills in sequence, threading context forward. Supports iteration groups: `(a, b) *N` or `(a, b, converge) ~N` |
 | `/arc-gate` | Phase-appropriate quality gate — selects the right skill chain |
+| `/self-test` | Validate the toolkit against itself — structural integrity, cross-references, composition coherence |
 
 ## Selection
 
@@ -36,6 +37,8 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 | X or Y? | `/triad` | `triad, steelman, crystallize` |
 | Something feels wrong | `/cognitive-debug` | `cognitive-debug, reframe, archaeology --layers F9` |
 | Create something excellent | `/invoke` | `invoke, crystallize` |
+| Write a proposal | `/propose` | `invoke, review, propose` |
+| Analysis → action (no pause) | `/land` | `(invoke, review, converge) ~3, land` |
 | What aren't we seeing? | `/reframe` | `reframe, gaps, consequences` |
 | Is this over-engineered? | `/crystallize` | `steelman, crystallize` |
 | Ready to ship? | `/launch-gate` | `ghost, threat-model, launch-gate` |
@@ -43,15 +46,17 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 | How's the API surface? | `/api-review` | — |
 | Trace this workflow | `/workflow-trace` | `workflow-trace, gaps, docs-quality` |
 | Orient me to this area | `/context-switch` | — |
+| What skills do I have? | `/catalog` | — |
+| Run autonomously | `/calibrate authority=autonomous` | Give direction, Claude selects chains |
 
 ## Composition
 
-`/compose` chains skills in sequence, threading context forward. Each skill sees what previous passes discovered.
+`/compose` chains skills in sequence, threading context forward. Each skill sees what previous passes discovered. Parenthesized groups iterate: `(invoke, review, converge) ~3` repeats until `converge` says STABLE or max 3 cycles. `*N` repeats exactly N times.
 
 ### Principles
 
 - **Order matters.** Perception-expanding skills (archaeology, reframe) before analytical skills (gaps, threat-model). Simplification (crystallize) last.
-- **Three is the sweet spot.** Two is a focused pair. Three is a productive pipeline. Four+ risks context dilution — each skill processes more noise from previous passes.
+- **Three is the sweet spot.** Two is a focused pair. Three is a productive pipeline. Four+ risks context dilution — each skill processes more noise from previous passes. Exception: iteration groups `(a, b, converge) ~N` manage their own length via convergence detection.
 - **Threading vs. independent.** Compose threads context — `/compose steelman, inversion` gives steelman-informed inversion. Running them separately gives two independent views. Choose based on whether you want cross-pollination or fresh perspectives.
 - **Dialogue is incompatible with compose.** Compose needs autonomous passes. Use `--dialogue` for standalone deep dives where your mid-stream input changes quality of output.
 - **Not everything composes.** `/context-switch`, `/scratch`, `/calibrate` are navigation or routing tools — they don't produce findings to thread forward.
@@ -85,7 +90,7 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 /compose archaeology --layers F4,F11, deep-review : "the design"
 
 # Document health (single-pass alternative: just run /doc-health)
-/compose drift-detect, coherence, garden : "the project"
+/compose drift-detect, doc-health, crystallize : "the project"
 
 # Newcomer audit — can someone new navigate this?
 /compose workflow-trace, gaps, docs-quality : "new developer onboarding"
@@ -124,7 +129,34 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 
 # Create then stress-test — generate the vision, then find what's missing
 /compose invoke, gaps : "the design"
+
+# Full creative cycle with auto-execution — design, refine, act
+/compose (invoke, review, converge) ~3, land : "the subject"
+
+# Write a rigorous proposal
+/compose invoke, review, propose : "the problem"
 ```
+
+### Composition Topology
+
+**Natural affinities** — pairs where the first skill transforms the second's cognitive field:
+- `archaeology → invoke` — excavation gives creation deep structure to build from
+- `steelman → inversion` — defend first, then attack the defense specifically
+- `ghost → incident-ready` — surface invisible dependencies, then assess response readiness
+- `invoke → crystallize` — diverge fully at full register, then converge editorially
+- `reframe → gaps` — shift the perceptual frame, then search within it
+
+**Terminal skills** — belong at the end of chains:
+- `land` — harvests and acts (must be last)
+- `crystallize` — reduces (placing it earlier risks premature simplification)
+- `tomorrow` — captures ephemeral knowledge (best when full analysis is fresh)
+- `propose` — formalizes upstream analysis into executable proposals
+
+**Dead zones** — skills that don't compose well:
+- `context-switch`, `calibrate`, `catalog` — navigation/routing/inventory tools, nothing to thread
+- `why-chain` — recursive solo excavation; exception: `why-chain, tomorrow`
+- `doc-health` in chains — already a composite; overlaps with constituent skills
+- `review` alongside `gaps` — review already includes gap analysis
 
 ### Implementation & Knowledge
 
@@ -146,7 +178,7 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 /compose drift-detect, deep-review, crystallize : "the project"
 
 # Entropy audit — stated vs actual, doc consistency, identifier lifecycle
-/compose drift-detect, coherence, garden : "the project"
+/compose drift-detect, doc-health, crystallize : "the project"
 ```
 
 ### Unblocking
@@ -158,6 +190,58 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 # Spatial sweep when conventional analysis produces nothing
 /compose reframe, gaps, consequences : "the subject"
 ```
+
+## Autonomous Exploration
+
+Give Claude direction and authority. Claude selects skills, composes chains, spawns agents, and acts.
+
+### How to trigger
+
+```
+/calibrate authority=autonomous
+
+Explore and improve [subject|toolkit]. You have complete design autonomy.
+```
+
+That's it. The calibration grants chain selection. The direction sets scope. Claude handles the rest.
+
+### What Claude does
+
+**Phase 1 — Breadth:** Spawn parallel agents for independent perspectives.
+```
+Agent 1: /ghost on [subject]        → hidden assumptions
+Agent 2: /reframe on [subject]      → what conventional analysis misses
+Agent 3: /catalog or /self-test     → structural inventory or integrity check
+```
+
+**Phase 2 — Depth:** Synthesize agent findings, then iterate.
+```
+/compose (invoke, review, converge) ~3 on the synthesis
+```
+
+**Phase 3 — Action:** Land with autonomous authority.
+```
+/land → execute clear calls, note judgment calls, act on both
+```
+
+### Guardrails
+
+Even at autonomous authority:
+- Genuinely irreversible external actions (deployment, public communication) still pause
+- All changes are uncommitted — `git checkout` reverts any action
+- Judgment calls are marked `[judgment]` so you can override after the fact
+- Each phase reports what it did before moving to the next
+
+### When to use
+
+- Toolkit self-improvement: *"Explore and improve the toolkit"*
+- Project health sweep: *"Find and fix what needs attention"*
+- Design exploration: *"Explore approaches to [problem]"*
+- Post-build cleanup: *"Review and tighten what we just built"*
+
+### Steering mid-flight
+
+You can intervene at any point — autonomous doesn't mean uninterruptible. Say "stop", "redirect to X", or "skip to land" and Claude adjusts. Your input always takes priority over autonomous judgment.
 
 ## Cognitive Quick Reference
 
@@ -211,7 +295,7 @@ Three cognitive skills support `--dialogue` for collaborative inquiry instead of
 | What can an attacker do? | `/threat-model` |
 | Are we ready to deploy? | `/launch-gate` |
 | What breaks in production? | `/compose ghost, incident-ready` |
-| Are these identifiers earning their keep? | `/garden greenfield` |
+| Are these identifiers earning their keep? | `/doc-health greenfield` |
 
 ## Environment Contract
 
@@ -231,13 +315,13 @@ Skills that "read all project markdown documents" expect a specific documentatio
 
 | Stage | Primary skills |
 |-------|---------------|
-| Exploring / deciding | archaeology, triad, reframe, consequences, invoke |
+| Exploring / deciding | archaeology, triad, reframe, consequences, invoke, converge, propose |
 | Designing | scope, gaps, deep-review, api-review |
 | Pre-implementation | steelman, inversion, threat-model, implement |
-| Implementing | context-switch, tomorrow, ghost |
-| Post-implementation | verify, drift-detect, coherence |
+| Implementing | context-switch, tomorrow, ghost, land |
+| Post-implementation | verify, drift-detect, doc-health |
 | Pre-launch | launch-gate, hardening-audit, ops-review, incident-ready |
-| Maintaining | drift-detect, garden, supply-chain-audit, doc-health |
+| Maintaining | drift-detect, supply-chain-audit, doc-health, catalog |
 
 ## Distribution & Sharing
 
@@ -309,9 +393,10 @@ You trust a skill as much as you trust its author with shell access to your mach
 ## Principles
 
 - **Skills are lenses** — each examines from a different angle. **Commands are workflows** — orchestrated sequences.
-- **All skills are read-only** — they propose changes but never modify files.
+- **All skills are read-only** — they propose changes but never modify files. Exception: `land` transitions analysis into action.
 - **Action-biased** — every finding includes what, where, and the specific fix.
 - **Composable** — `/compose` chains skills with threaded context. Order and combination matter.
 - **Architecture-derived** — security and readiness skills reason from the specific stack, not generic checklists.
 - **Every word in a skill prompt shapes the cognitive field** — skill definitions are precision instruments. Do not paraphrase.
+- **Two tiers of value** — cognitive-shaping skills (archaeology, invoke, triad, reframe, crystallize) produce thinking patterns the base model doesn't reach alone. Analytical skills (gaps, threat-model, scope) provide consistency and composability. Prompt craft has highest leverage on cognitive skills.
 - **One-shot by default, dialogue on request** — cognitive skills support `--dialogue` for collaborative inquiry.

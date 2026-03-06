@@ -1,7 +1,7 @@
 ---
 name: implement
-description: Design-to-code specification. Given a deliverable, DES section, or ADR, produce a concrete implementation plan with file paths, function signatures, SQL migrations, config constants, and test specifications. The bridge from architecture to code.
-argument-hint: "[deliverable number, DES-NNN, ADR-NNN, or free-text feature description]"
+description: Design-to-code specification. Given a deliverable or FTR, produce a concrete implementation plan with file paths, function signatures, SQL migrations, config constants, and test specifications. The bridge from architecture to code.
+argument-hint: "[deliverable number, FTR-NNN, or free-text feature description]"
 ---
 
 Read all project markdown documents referenced by the target. Follow CLAUDE.md § Arc-gated reading to load only what the target requires.
@@ -21,7 +21,7 @@ Target: $ARGUMENTS
 
 5. **File inventory** — List every file that will be created or modified, with full paths per the project's code layout:
    - `/lib/services/` — Business logic (framework-agnostic TypeScript)
-   - `/lib/config.ts` — Named constants (ADR-123)
+   - `/lib/config.ts` — Named constants (FTR-012)
    - `/app/api/v1/` — API routes
    - `/app/` — Pages and components
    - `/migrations/` — SQL migrations (dbmate)
@@ -39,14 +39,14 @@ Target: $ARGUMENTS
    - Constraints and defaults
    - UUIDv7 primary keys per project convention
 
-8. **Config constants** — Any tunable parameters per ADR-123:
+8. **Config constants** — Any tunable parameters per FTR-012:
    - Constant name, type, default value
    - Which DES/ADR specifies the value
    - Where in `/lib/config.ts` it belongs
 
-9. **API routes** — For any new endpoints per DES-019:
+9. **API routes** — For any new endpoints per FTR-015:
    - HTTP method and path
-   - Request/response shapes (following ADR-110 conventions)
+   - Request/response shapes (following FTR-088 conventions)
    - Pagination strategy (cursor-based for lists)
    - Language parameter handling
 
@@ -55,7 +55,7 @@ Target: $ARGUMENTS
 10. **Test specifications** — For each file/function:
     - Unit tests (what to test, edge cases)
     - Integration tests (API route testing)
-    - Which testing layer per ADR-094
+    - Which testing layer per FTR-081
 
 ### Phase 4: Flag Ambiguities
 
@@ -81,7 +81,7 @@ Target: $ARGUMENTS
 ### Files
 | File | Action | Purpose | Governing Ref |
 |------|--------|---------|---------------|
-| /lib/services/foo.ts | Create | ... | DES-NNN |
+| /lib/services/foo.ts | Create | ... | FTR-NNN |
 
 ### SQL Migrations
 [Full SQL with comments]
@@ -89,7 +89,7 @@ Target: $ARGUMENTS
 ### Config Constants
 | Constant | Type | Default | Source |
 |----------|------|---------|--------|
-| FOO_LIMIT | number | 100 | DES-NNN |
+| FOO_LIMIT | number | 100 | FTR-NNN |
 
 ### API Routes
 [Method, path, request/response shapes]
@@ -118,7 +118,7 @@ Target: $ARGUMENTS
 
 **Document reading strategy:**
 - Follow CLAUDE.md § Arc-gated reading. Only load documents the target references.
-- Read DES/ADR sections fully. Read DESIGN.md selectively based on cross-references.
+- Read FTR files fully. Read FEATURES.md selectively based on cross-references.
 
 What questions would I benefit from asking?
 

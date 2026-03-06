@@ -1,6 +1,6 @@
 # Yogananda Skills
 
-Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform). 37 skills (31 analytical + 6 SRF mission), 9 workflow commands, and 4 SRF-specialized agents — shared across projects, the team, and autonomous agents.
+Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform). 39 skills (33 analytical + 6 SRF mission), 9 workflow commands, and 4 SRF-specialized agents — shared across projects, the team, and autonomous agents.
 
 ## What This Is
 
@@ -15,14 +15,14 @@ SRF TEAM MEMBER                          AUTONOMOUS AGENTS
 ───────────────                          ─────────────────
 claude plugin install                    .claude/agents/*.md
   github:rana/yogananda-skills        4 SRF-specialized agents
-  37 skills as                             embed skill methodology
+  39 skills as                             embed skill methodology
   /y:skill-name.                            with project-specific
   9 commands + 4 agents included.          reading strategies.
 
 PORTAL REPOSITORY                        PERSONAL DEVELOPMENT
 ────────────────                         ────────────────────
 .claude/skills/                          ~/.claude/skills/
-  6 mission-specific skills                Same 31 skills available
+  6 mission-specific skills                Same 33 skills available
   checked into the portal repo.            as /skill-name in every
   Team gets them on git clone.             project on your machine.
 ```
@@ -43,7 +43,7 @@ claude plugin install github:rana/yogananda-skills
 
 After installation: `/y:deep-review`, `/y:gaps`, etc.
 
-## Skills (37)
+## Skills (39)
 
 ### Review & Quality
 
@@ -95,6 +95,8 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `tomorrow` | Future-self documentation (what will confuse you in 6 months) |
 | `drift-detect` | Detect unconscious architectural evolution |
 | `workflow-trace` | End-to-end workflow tracing for friction points |
+| `propose` | Write a proposal for any subject — rigorous, executable, complete |
+| `land` | Transition from analysis to action — harvest findings, decide, execute |
 
 ### SRF Mission
 
@@ -133,7 +135,7 @@ SRF-specialized agents that embed skill methodology with project-specific readin
 | `stakeholder-brief` | *(unique — no skill equivalent)* | Translate architecture into SRF stakeholder communication. Writes PROPOSAL.md with seeker stories, decision points, principle mapping. 1500 words, zero jargon. |
 
 **What makes these SRF-specific:**
-- Reading strategies reference PRINCIPLES.md, DECISIONS body files, DES-060, PROPOSALS.md
+- Reading strategies reference PRINCIPLES.md, DECISIONS body files, FTR-096, PROPOSALS.md
 - Identifier awareness: PRI-NN, ADR-NNN, DES-NNN, PRO-NNN systems
 - Stack grounding: Neon, Vercel, Sentry, AWS, DELTA compliance, axe-core
 - Vocabulary: "seekers" not "users", "teachings" not "content", "the portal" not "the application"
@@ -161,6 +163,16 @@ Skills compose via `/compose`. Order matters — perception-expanding before ana
 # Document health
 /compose y:drift-detect, y:doc-health, y:crystallize : "the project"
 ```
+
+```bash
+# Design and act — creative passes with auto-execution
+/compose y:invoke, y:review, y:invoke, y:review, y:land : "the subject"
+
+# Write a proposal
+/compose y:invoke, y:review, y:propose : "the problem"
+```
+
+Append `land` as the final skill to transition from analysis to action without pausing. `land` harvests all findings, triages into clear/judgment/human calls, and acts on the first two.
 
 Three is the sweet spot. Four+ risks context dilution. See SYSTEM.md for the full selection matrix and composition guide.
 

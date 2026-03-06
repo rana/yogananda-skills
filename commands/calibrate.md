@@ -35,6 +35,12 @@ How much attention to quality of expression — in analysis, code, and communica
 - **Composed**: Considered, deliberate, nothing wasted. Every choice is a choice.
 - **Crystalline**: Every element earns its place. The whole exceeds the sum. Precision as aesthetic.
 
+### Decision Authority
+Who makes decisions? Authority is enacted by the session operator (Claude), not by individual skill prompts. When calibrated, interpret skill confirmation gates through the authority lens.
+- **Advisory**: Propose changes, present options, wait for human decision. Default for most sessions.
+- **Collaborative**: Make clear calls autonomously, surface judgment calls, pause on scope decisions.
+- **Autonomous**: AI is architect, designer, implementer, and operator. All calls are mine — clear calls execute immediately, judgment calls execute with reasoning noted, human calls become judgment calls. Interpret `land` scope checks as informational, not blocking. Resolve `converge` STUCK by choosing the strongest path forward with reasoning noted. Chain selection is mine — choose which skills to run, in what order, when to spawn agents for breadth vs compose for depth. Only genuinely irreversible external actions (deployment, public communication) pause for confirmation.
+
 ### Output Shape
 - **Dense**: Maximum information per sentence. Assume expertise.
 - **Structured**: Headers, lists, clear organization. Good for complex analysis.
@@ -47,5 +53,6 @@ Output a compact 3-5 line summary of session parameters. This is the reference f
 Example:
 ```
 Calibration: Direct, adaptive resolution (starting mid-level), analytical mode,
-moderate speculation, composed craft, dense output. Session ready.
+moderate speculation, composed craft, collaborative authority, dense output.
+Session ready.
 ```
