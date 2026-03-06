@@ -1,8 +1,8 @@
 # SRF Cognitive Toolkit
 
-Cognitive infrastructure for the SRF Online Teachings Portal — 41 skills (35 analytical + 6 SRF mission), 10 commands, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
+Cognitive infrastructure for the SRF Online Teachings Portal — 42 skills (36 analytical + 6 SRF mission), 10 commands, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
 
-34 analytical skills are domain-agnostic (they analyze whatever project they're pointed at). 6 SRF mission skills are portal-specific (proposal management, mission alignment, seeker experience). 4 domain-agnostic agents (architect, designer, builder, operator) work in any codebase. 4 SRF-specialized agents embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
+35 analytical skills are domain-agnostic (they analyze whatever project they're pointed at). 6 SRF mission skills are portal-specific (proposal management, mission alignment, seeker experience). 1 skill (ftr-curate) bridges both — domain-agnostic methodology with FTR-specific structural awareness. 4 domain-agnostic agents (architect, designer, builder, operator) work in any codebase. 4 SRF-specialized agents embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
 
 ## Skill Anatomy
 
@@ -33,7 +33,7 @@ Read all project markdown documents to ground in the project's actual state.
 **Conventions that matter:**
 - "Read all project markdown documents" grounds in the SRF portal's docs: CLAUDE.md, PRINCIPLES.md, CONTEXT.md, DESIGN.md, DECISIONS.md, ROADMAP.md, PROPOSALS.md
 - Output management segments prevent token-limit timeouts; auto-continuation ensures completeness
-- Skills are read-only — they propose changes but never modify files. Exception: `land` is a write-enabled skill designed to transition analysis into action
+- Skills are read-only — they propose changes but never modify files. Exceptions: `land` (transitions analysis into action) and `ftr-curate` (FTR corpus operations with preview-by-default)
 - Closing questions ("What am I not asking?") seed meta-cognition — functional, not decorative
 - "You have complete design autonomy" in cognitive skills unlocks creative capacity — it's a precision instrument
 - Skill prompts are precision instruments — specific wording produces measurably different cognitive behavior. Do not paraphrase when editing
@@ -64,7 +64,7 @@ Example: `- **[gaps-3]** important dependency — DESIGN.md:API Layer: No retry 
 
 Fields: `id` (skill name + number), `severity` (critical/important/minor), `dimension` (skill-specific tag), `location` (file:section), `finding` (what's wrong), `fix` (specific action).
 
-Skills that produce this shape: gaps, ghost, review, deep-review, doc-health, threat-model, hardening-audit, scope, consequences, verify. Cognitive/creative skills (archaeology, invoke, triad, reframe) produce narrative — they don't use this shape.
+Skills that produce this shape: gaps, ghost, review, deep-review, doc-health, threat-model, hardening-audit, scope, consequences, verify, ftr-stale. Cognitive/creative skills (archaeology, invoke, triad, reframe) produce narrative — they don't use this shape.
 
 ## Skill Taxonomy
 
@@ -93,7 +93,7 @@ srf/
 ├── SYSTEM.md                    # Human reference (selection matrix, composition guide)
 ├── README.md                    # Team usage guide
 ├── agents/                      # 8 agents (4 domain-agnostic + 4 SRF-specialized)
-├── skills/                      # 41 skills (35 analytical + 6 SRF mission)
+├── skills/                      # 42 skills (36 analytical + 6 SRF mission)
 ├── commands/                    # 10 workflow commands
 └── scripts/
     └── sync-from-source.sh      # Sync from ~/.claude/ (for maintainers)

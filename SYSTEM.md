@@ -1,6 +1,6 @@
 # System
 
-A cognitive toolkit for Claude Code. 41 skills, 10 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized). Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
+A cognitive toolkit for Claude Code. 42 skills, 10 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized). Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
 
 ## Commands
 
@@ -53,8 +53,9 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 | Add a content theme | `/theme-integrate` | — |
 | How does this serve [population]? | `/cultural-lens` | `cultural-lens, gaps` |
 | Graduate a proposal to FTR | `/proposal-merge` | — |
-| Consolidate raw explorations | `/dedup-proposals` | — |
-| Survey a spec corpus (FTRs, RFCs) | `/spec-survey` | `spec-survey, crystallize, land` |
+| Curate the FTR corpus | `/ftr-curate` | `spec-survey, ftr-curate, land` |
+| Audit FTR freshness | `/ftr-stale` | `ftr-stale, ftr-curate, land` |
+| Survey a spec corpus (FTRs, RFCs) | `/spec-survey` | `spec-survey --focus FTR-NNN, ftr-curate` |
 
 ## Agents
 
@@ -377,7 +378,7 @@ Skills that "read all project markdown documents" expect a specific documentatio
 | Implementing | context-switch, tomorrow, ghost, land |
 | Post-implementation | verify, drift-detect, doc-health, proposal-merge |
 | Pre-launch | launch-gate, hardening-audit, ops-review, incident-ready, cultural-lens |
-| Maintaining | drift-detect, supply-chain-audit, doc-health, catalog, dedup-proposals, spec-survey |
+| Maintaining | drift-detect, supply-chain-audit, doc-health, catalog, ftr-curate, ftr-stale, spec-survey |
 | Content integration | theme-integrate, seeker-ux, cultural-lens, mission-align |
 
 ## Distribution & Sharing
@@ -450,7 +451,7 @@ You trust a skill as much as you trust its author with shell access to your mach
 ## Principles
 
 - **Skills are lenses** — each examines from a different angle. **Commands are workflows** — orchestrated sequences.
-- **All skills are read-only** — they propose changes but never modify files. Exception: `land` transitions analysis into action.
+- **All skills are read-only** — they propose changes but never modify files. Exceptions: `land` transitions analysis into action; `ftr-curate` performs FTR corpus operations (preview by default).
 - **Action-biased** — every finding includes what, where, and the specific fix.
 - **Composable** — `/compose` chains skills with threaded context. Order and combination matter.
 - **Architecture-derived** — security and readiness skills reason from the specific stack, not generic checklists.

@@ -105,7 +105,8 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `mission-align` | SRF principle alignment (verbatim fidelity, calm tech, DELTA, global equity) |
 | `seeker-ux` | Reading and seeker experience review (accessibility, helpfulness, spiritual uplift) |
 | `cultural-lens` | Cultural, spiritual, or demographic perspective audit |
-| `dedup-proposals` | Consolidate `.elmer/proposals/` explorations into curated PRO-NNN entries |
+| `ftr-curate` | Compare, merge, split, archive FTRs; triage explorations into curated FTR entries |
+| `ftr-stale` | Corpus freshness audit — state accuracy, content drift, relevance decay |
 | `proposal-merge` | Graduate PRO-NNN into ADR/DES edits across all project documents |
 | `theme-integrate` | Integrate new content themes into taxonomy, graph, and enrichment pipeline |
 

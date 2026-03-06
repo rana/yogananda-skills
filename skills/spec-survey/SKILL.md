@@ -1,10 +1,18 @@
 ---
 name: spec-survey
 description: Specification corpus analysis. Maps relationships across a directory of spec files, identifies overlap clusters, orphans, hubs, and produces merge/archive/split recommendations. Works on FTRs, RFCs, ADRs, or any consistently-structured specification corpus.
-argument-hint: "[directory path or 'features/' — the specification corpus to survey]"
+argument-hint: "[directory path or 'features/'] [--focus FTR-NNN,FTR-MMM,...] — the specification corpus to survey"
 ---
 
 Read the project's specification corpus using the phased reading protocol below. The target directory is specified in the argument; default to `features/` if none given.
+
+### Focus Mode
+
+If `--focus FTR-NNN,FTR-MMM,...` is provided, run Phase 1 (index) for the full corpus to establish context, then restrict Phase 2 and Phase 3 to:
+- The specified FTRs
+- Their 1-hop neighborhood (FTRs referenced by or referencing the focus set)
+
+This produces a scoped topology for a specific cluster without losing corpus context. Use after triage (from `/ftr-curate` or previous spec-survey) identifies clusters worth deeper analysis.
 
 ## Phased Reading Protocol
 

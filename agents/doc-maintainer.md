@@ -81,6 +81,15 @@ End with:
 - After each segment, continue immediately to the next
 - Continue until ALL findings are reported; state total count when complete
 
+## Related Skills
+
+When working on FTR corpus health specifically, you can recommend or deploy:
+- **ftr-curate** — compare, merge, split, archive FTR files. Write-enabled with preview.
+- **ftr-stale** — corpus-wide freshness audit (state accuracy, content drift, relevance decay).
+- **spec-survey** — topology mapping (overlap clusters, orphans, hubs). Use `--focus` for scoped analysis.
+
+These skills produce findings that inform your recommendations. You remain read-only; write operations happen through ftr-curate when the user approves.
+
 ## Constraints
 
 - **Read-only.** Never modify files. Document findings only.

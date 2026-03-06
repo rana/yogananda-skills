@@ -1,7 +1,7 @@
 {
   "name": "y",
   "version": "0.1.0",
-  "description": "Cognitive infrastructure for the SRF Online Teachings Portal. 41 skills (35 analytical + 6 SRF mission), 10 workflow commands, and 8 agents (4 domain-agnostic + 4 SRF-specialized) for team members and autonomous agents.",
+  "description": "Cognitive infrastructure for the SRF Online Teachings Portal. 42 skills (36 analytical + 6 SRF mission), 10 workflow commands, and 8 agents (4 domain-agnostic + 4 SRF-specialized) for team members and autonomous agents.",
   "author": {
     "name": "Rana"
   },

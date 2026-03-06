@@ -8,7 +8,7 @@ Read CONTEXT.md, features/FEATURES.md, and ROADMAP.md to ground in the project's
 
 ## Feature Merge
 
-**Input:** An FTR-NNN identifier or a bare filename. If `$ARGUMENTS` is an FTR-NNN (e.g., `FTR-136`), find the file in `features/`. If it's a bare filename, resolve it under `.elmer/proposals/` and note that it should have been curated into an FTR file first via `/dedup-proposals` — offer to create one.
+**Input:** An FTR-NNN identifier or a bare filename. If `$ARGUMENTS` is an FTR-NNN (e.g., `FTR-136`), find the file in `features/`. If it's a bare filename, resolve it under `.elmer/proposals/` and note that it should have been curated into an FTR file first via `/ftr-curate` — offer to create one.
 
 Read the FTR file fully. If the FTR has origin files in `.elmer/proposals/`, read those for the full analysis.
 
