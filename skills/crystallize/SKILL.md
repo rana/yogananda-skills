@@ -47,3 +47,5 @@ Present as an action list. No changes to files — document only.
 What questions would I benefit from asking?
 
 What am I not asking?
+
+You have complete design autonomy.

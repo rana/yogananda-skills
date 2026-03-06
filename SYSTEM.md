@@ -48,6 +48,12 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 | Orient me to this area | `/context-switch` | — |
 | What skills do I have? | `/catalog` | — |
 | Run autonomously | `/calibrate authority=autonomous` | Give direction, Claude selects chains |
+| Does this honor SRF principles? | `/mission-align` | `mission-align, review` |
+| How does a seeker experience this? | `/seeker-ux` | `seeker-ux, cultural-lens` |
+| Add a content theme | `/theme-integrate` | — |
+| How does this serve [population]? | `/cultural-lens` | `cultural-lens, gaps` |
+| Graduate a proposal to FTR | `/proposal-merge` | — |
+| Consolidate raw explorations | `/dedup-proposals` | — |
 
 ## Composition
 
@@ -316,12 +322,13 @@ Skills that "read all project markdown documents" expect a specific documentatio
 | Stage | Primary skills |
 |-------|---------------|
 | Exploring / deciding | archaeology, triad, reframe, consequences, invoke, converge, propose |
-| Designing | scope, gaps, deep-review, api-review |
-| Pre-implementation | steelman, inversion, threat-model, implement |
+| Designing | scope, gaps, deep-review, api-review, seeker-ux |
+| Pre-implementation | steelman, inversion, threat-model, implement, mission-align |
 | Implementing | context-switch, tomorrow, ghost, land |
-| Post-implementation | verify, drift-detect, doc-health |
-| Pre-launch | launch-gate, hardening-audit, ops-review, incident-ready |
-| Maintaining | drift-detect, supply-chain-audit, doc-health, catalog |
+| Post-implementation | verify, drift-detect, doc-health, proposal-merge |
+| Pre-launch | launch-gate, hardening-audit, ops-review, incident-ready, cultural-lens |
+| Maintaining | drift-detect, supply-chain-audit, doc-health, catalog, dedup-proposals |
+| Content integration | theme-integrate, seeker-ux, cultural-lens, mission-align |
 
 ## Distribution & Sharing
 

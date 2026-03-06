@@ -1,6 +1,6 @@
 Deep multi-dimensional perspective — biased toward action.
 
-Read CONTEXT.md, DESIGN.md, DECISIONS.md, and ROADMAP.md first to ground your exploration in the project's actual state.
+Read all project markdown documents to ground your exploration in the project's actual state.
 
 $ARGUMENTS
 

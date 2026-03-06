@@ -40,13 +40,25 @@ If a group contains `converge`, its directive controls the loop:
 - **STABLE** — exit group, continue to next skill in chain
 - **CONTINUE** — repeat the group, feeding converge's focus forward
 - **REDIRECT** — note the scope shift for the unified summary, continue the group
-- **STUCK** — pause chain, present converge's assessment, wait for user input before continuing
+- **STUCK** — pause chain, present converge's assessment, wait for user input.
+  Recovery options: user says "skip" (exit group, continue chain), "redirect to X"
+  (alter focus and continue group), or "break" (stop entire chain).
+  At autonomous authority, resolve STUCK by choosing the strongest path forward
+  with reasoning noted.
 
-If a group uses `* N` or `~ N` but contains no `converge`, exit after N
-iterations or when the final skill in the group produces no new findings.
+Groups with `~ N` should include `converge` to control iteration. Without it,
+exit after N iterations or when the final skill produces no new findings
+compared to the previous cycle.
 
 Between iteration cycles, annotate the output boundary: `--- Cycle N complete ---`.
 This gives converge explicit markers for delta extraction.
+
+## Chain Length
+
+Three skills is the sweet spot. Four is the practical limit for reliable context
+threading — each skill adds output that subsequent skills must process.
+For longer analysis, use `land` to harvest findings mid-chain, or run separate
+compose chains and synthesize manually.
 
 ## Output Management
 

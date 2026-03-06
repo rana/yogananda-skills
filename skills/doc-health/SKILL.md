@@ -73,9 +73,9 @@ Present as a prioritized action list. No changes to files — document only.
 - If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
-- Read CLAUDE.md, DECISIONS.md index, and ROADMAP.md first for structural overview.
-- Read DESIGN.md and CONTEXT.md for cross-reference verification.
-- Read DECISIONS body files and PROPOSALS.md only when specific identifiers need verification.
+- Read CLAUDE.md, FEATURES.md index, and ROADMAP.md first for structural overview.
+- Read CONTEXT.md for cross-reference verification.
+- Read specific FTR files only when identifiers need verification.
 - Do not re-read documents between phases — build the picture incrementally.
 
 What questions would I benefit from asking?

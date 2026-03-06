@@ -4,7 +4,7 @@ description: Unified pre-implementation quality gate. Runs alignment + coherence
 argument-hint: "[optional focus area or file/section to review]"
 ---
 
-Read CONTEXT.md, DESIGN.md, DECISIONS.md, and ROADMAP.md first to ground in the project's actual state.
+Read CONTEXT.md, FEATURES.md, and ROADMAP.md first to ground in the project's actual state.
 
 ## Unified Review
 
@@ -12,11 +12,11 @@ Perform a single-pass review covering three dimensions simultaneously. Do NOT ru
 
 ### Dimension 1: Intent Alignment
 
-Check whether the design and implementation align with the project's stated purpose, principles, and constraints. Draw these from CONTEXT.md, DECISIONS.md, project README, or any document that states goals or governing principles.
+Check whether the design and implementation align with the project's stated purpose, principles, and constraints. Draw these from CONTEXT.md, FEATURES.md, project README, or any document that states goals or governing principles.
 
 Look for:
 - Deviations from stated goals or success criteria
-- Violations of recorded design decisions (ADRs)
+- Violations of recorded design decisions (FTR files)
 - Scope creep beyond defined boundaries
 - Patterns that serve implementer preference over stated project needs
 

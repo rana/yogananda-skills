@@ -4,7 +4,7 @@ description: SRF principle alignment check. Verifies designs honor verbatim fide
 argument-hint: "[optional principle to focus on]"
 ---
 
-Read CONTEXT.md, DESIGN.md, DECISIONS.md, and ROADMAP.md to ground in the project's actual state.
+Read CONTEXT.md, FEATURES.md, and ROADMAP.md to ground in the project's actual state.
 
 ## SRF Mission Alignment Check
 
@@ -43,7 +43,7 @@ Present as an action list. No changes to files — document only.
 
 **Document reading strategy:**
 - CONTEXT.md and ROADMAP.md: read fully (short documents).
-- DESIGN.md and DECISIONS.md: read the index/overview sections first. Only read specific ADR or design sections relevant to the focused principle(s).
+- FEATURES.md: read the index first. Only read specific FTR files relevant to the focused principle(s).
 
 What questions would I benefit from asking?
 
