@@ -23,7 +23,7 @@ Run `/catalog` to build the full skill inventory. Then verify:
 For each `skills/*/SKILL.md`:
 - Frontmatter has `name`, `description`, `argument-hint`
 - `name` in frontmatter matches directory name
-- Output management section exists with segment size and auto-continue instruction
+- Output section exists with skill-specific guidance
 - Skills claiming to produce standard finding shape actually instruct that format
 - Cognitive/creative skills that shouldn't produce finding shape don't claim to
 
@@ -57,10 +57,6 @@ Run tests in order. For each test:
 2. Report pass/fail with specifics
 3. For failures: state the exact discrepancy and the fix
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Report each test section as a segment. Do not accumulate.
-- Continue through all 5 test sections without pausing.
-- Summarize at end: total checks, passes, failures.
-- Failures are actionable — each includes the specific fix.
+Report each test section, then summarize at end: total checks, passes, failures. Failures are actionable — each includes the specific fix.

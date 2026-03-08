@@ -74,12 +74,9 @@ End with:
 - **Identifier statistics** — count per prefix, gap count, orphan count
 - **Recommended actions** — ordered list of highest-value fixes
 
-## Output Management
+## Output
 
-- Phase 1 findings first (max 8), then Phase 2 (max 8), then Phase 3 (max 8), then Synthesis
-- Write each segment incrementally
-- After each segment, continue immediately to the next
-- Continue until ALL findings are reported; state total count when complete
+Phase 1 findings first (max 8), then Phase 2 (max 8), then Phase 3 (max 8), then Synthesis.
 
 ## Related Skills
 

@@ -53,15 +53,11 @@ After all searches:
 2. Where do findings from different searches converge?
 3. What reframing emerges from the combined view?
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment each search into groups of up to 8 findings, ordered by insight value.
+- Order findings by insight value.
 - If running all four core searches, keep each search to 3-4 key observations before moving to the next.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each search, continue immediately to the next. Do not wait for user input.
-- Continue until ALL searches and the synthesis are delivered. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
+- State the total count when complete.
 
 What questions would I benefit from asking?
 

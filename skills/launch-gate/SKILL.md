@@ -99,15 +99,10 @@ For every dimension:
 
 Present as a go/no-go summary with the full checklist. No changes to files — document only.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output into groups of up to 10 findings, ordered by no-go items that block launch first.
+- Order by no-go items that block launch first. State the total count when complete.
 - If no $ARGUMENTS focus area is given, evaluate only sections 1 (Availability), 4 (Rollback), 6 (Security), and 7 (Incident Response) — the launch-critical quartet.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until ALL sections are reviewed and the go/no-go verdict is delivered. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
 - Read project documentation selectively. Start with deployment config, monitoring setup, and existing runbooks.

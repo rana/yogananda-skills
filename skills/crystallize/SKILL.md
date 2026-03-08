@@ -35,14 +35,9 @@ For every proposal:
 
 Present as an action list. No changes to files — document only.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output into groups of up to 8 simplification proposals, ordered by complexity reduction impact.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until ALL proposals are reported. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
+Order proposals by complexity reduction impact. State the total count when complete.
 
 What questions would I benefit from asking?
 

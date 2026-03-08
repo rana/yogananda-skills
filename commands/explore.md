@@ -4,9 +4,9 @@ Read all project markdown documents to ground your exploration in the project's 
 
 $ARGUMENTS
 
-## Output Management
+## Output
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+Deliver highest-priority findings first. Dense observations, not expansive prose.
 
 What questions would I benefit from asking?
 

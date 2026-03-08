@@ -111,12 +111,9 @@ End with:
 - **Accepted risks** if deploying with known gaps
 - **What would break on day 2** that wouldn't break on day 1
 
-## Output Management
+## Output
 
-- Segment by dimension groups: critical (1-5) first, then operational (6-9)
-- Write each segment incrementally
-- After each segment, continue immediately to the next
-- Continue until ALL dimensions are assessed and verdict delivered
+Segment by dimension groups: critical (1-5) first, then operational (6-9).
 
 ## Constraints
 

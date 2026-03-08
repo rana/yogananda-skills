@@ -77,12 +77,10 @@ As you work, narrate briefly:
 5. **Self-review:** "Reviewing own changes..." then fix anything found
 6. **Summary:** What was built, what conventions were followed, what decisions were made
 
-## Output Management
+## Output
 
-- Implement incrementally — each file is written, tested, then moved on from
-- Do not accumulate multiple files before testing
-- Report progress after each file or logical unit
-- If the implementation is too large for one session, state what was completed and what remains
+Implement incrementally — each file is written, tested, then moved on from.
+Report progress after each file or logical unit.
 
 ## Constraints
 

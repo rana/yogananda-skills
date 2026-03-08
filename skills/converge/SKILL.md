@@ -53,7 +53,7 @@ Emit exactly one:
 - **STUCK [description]** — oscillation detected or stalls accumulating.
   State what's oscillating and why. Stop and wait for user input.
 
-## Output Management
+## Output
 
 This is a gate, not an analysis. One segment only.
 Delta list + assessment + directive. Concise.

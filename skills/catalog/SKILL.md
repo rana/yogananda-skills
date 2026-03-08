@@ -51,11 +51,6 @@ If `$ARGUMENTS` specifies a filter:
 - **By composability**: show skills that compose well with a named skill
 - **By property**: any specific property query
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Present per-skill properties in a compact table or structured list — not verbose prose per skill.
-- Aggregate views only when requested (`--aggregate` or specific aggregate query).
-- If filtered, show only the filtered subset with full detail.
-- One segment for skills, one for commands. Aggregate views as a third segment when requested.
-- Write each segment incrementally. Continue until complete.
+Present per-skill properties in a compact table or structured list — not verbose prose per skill. Aggregate views only when requested (`--aggregate` or specific aggregate query). If filtered, show only the filtered subset with full detail.

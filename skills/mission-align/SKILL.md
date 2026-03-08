@@ -31,15 +31,10 @@ For every misalignment or risk:
 
 Present as an action list. No changes to files — document only.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output into groups of up to 8 findings, ordered by severity.
+- Order by severity. State the total count when complete.
 - If no $ARGUMENTS focus area is given, audit only the top 3 most at-risk principles rather than all 11.
-- Write findings to MISSION-ALIGN-AUDIT.md incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until ALL principles in the focus area are audited. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
 - CONTEXT.md and ROADMAP.md: read fully (short documents).

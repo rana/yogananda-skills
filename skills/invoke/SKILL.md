@@ -27,7 +27,7 @@ What would make this feel inevitable, like the design could not have been otherw
 How holographically crystalline is the design?
 
 
-## Output Management
+## Output
 
 Write each section incrementally. Continue until the full design is delivered.
 Quality over completeness — stop when adding more would dilute.

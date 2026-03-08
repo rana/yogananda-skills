@@ -32,14 +32,10 @@ Present as:
 
 No changes to files — document only.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output into groups of up to 8 findings, ordered by scope risk and dependency depth.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until ALL findings are reported. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
+- Order by scope risk and dependency depth.
+- State the total count when complete.
 
 What questions would I benefit from asking?
 

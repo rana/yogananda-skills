@@ -74,14 +74,9 @@ For each requirement in the specification:
 [Prioritized list of discrepancies]
 ```
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output: Compliance Summary first, then Principle Compliance, then Test Coverage, then Recommendations.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until the full verification is delivered.
-- If the implementation is too large for one session, state what was covered and what remains.
+Order: Compliance Summary first, then Principle Compliance, then Test Coverage, then Recommendations.
 
 What questions would I benefit from asking?
 

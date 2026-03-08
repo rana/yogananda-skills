@@ -147,10 +147,10 @@ After execution, report:
 - **Minimal graph additions.** Don't create concept nodes for things that are better served by the Vocabulary Bridge. Graph nodes are for structural relationships; vocabulary mappings are for search expansion.
 - **Match existing density.** Read adjacent theme entries in each target. Match their level of detail. Don't over-specify a theme that sits next to three-line entries.
 
-## Output Management
+## Output
 
-Present all artifacts before writing. Segment into groups of up to 7 artifacts per theme.
+Present all artifacts before writing. Do not execute without explicit approval.
 
 If the theme naturally decomposes into sub-themes (e.g., "self-worth" + "abundance" + "scientific view"), ask the user whether to integrate as one compound theme or as separate themes with cross-links.
 
-After each approved group of artifacts is written, proceed immediately to present the next group. Continue until all artifacts for the theme are processed. State the total count when complete.
+State the total count when complete.

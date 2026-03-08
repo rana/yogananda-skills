@@ -59,15 +59,11 @@ After all lenses:
 2. **Key insight**: What emerged from the full analysis that no single lens would have found?
 3. **Actionable tension**: What's the productive way to hold this polarity going forward? What does it suggest for decisions, design, or direction?
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Each lens: 1 core question + 2-3 key observations. Dense, not expansive.
-- Without `--all-lenses`, run at most 4 lenses before the synthesis.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment of lenses, continue immediately to the next. Do not wait for user input.
-- Continue until ALL active lenses and the synthesis are delivered.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
+Each lens: 1 core question + 2-3 key observations. Dense, not expansive.
+
+Without `--all-lenses`, run at most 4 lenses before the synthesis.
 
 What questions would I benefit from asking?
 

@@ -11,9 +11,9 @@ Be proactive — propose concrete actions, not just observations. For every insi
 
 Present proposed changes as a clear action list the user can approve, reject, or refine. Do not modify any files — document only.
 
-## Output Management
+## Output
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+Deliver highest-priority findings first. Dense observations, not expansive prose.
 
 What questions would I benefit from asking?
 

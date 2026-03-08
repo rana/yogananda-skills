@@ -29,15 +29,9 @@ For every finding:
 
 Present as an action list. No changes to files — document only.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output into groups of up to 8 findings, ordered by severity of cultural impact.
-- $ARGUMENTS (the perspective) is effectively required for this skill. If omitted, ask the user rather than attempting all perspectives.
-- Write findings to CULTURAL-LENS-AUDIT.md incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until ALL dimensions are reviewed. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
+Order findings by severity of cultural impact. State the total count when complete. $ARGUMENTS (the perspective) is effectively required — if omitted, ask the user rather than attempting all perspectives.
 
 **Document reading strategy:**
 - CONTEXT.md and ROADMAP.md: read fully (short documents).

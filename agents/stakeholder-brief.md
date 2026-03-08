@@ -94,8 +94,8 @@ with THIS arc, and what the design does to address it.]
 - **No implementation details.** Don't describe database schemas, code structure, or deployment pipelines.
 - **Every claim traceable.** Parenthetical references to DES/ADR sections so engineers can verify, but don't explain the references.
 
-## Output Management
+## Output
 
-**Write early, write often.** Create PROPOSAL.md with skeleton after initial reading. Fill sections incrementally.
+Write early, write often. Create PROPOSAL.md with skeleton after initial reading. Fill sections incrementally.
 
-**Scope control:** If an arc has 15+ deliverables, group them into thematic clusters rather than listing individually. The brief is a communication tool, not a specification.
+If an arc has 15+ deliverables, group them into thematic clusters rather than listing individually. The brief is a communication tool, not a specification.

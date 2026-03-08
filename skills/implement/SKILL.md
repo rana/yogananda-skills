@@ -107,14 +107,7 @@ Target: $ARGUMENTS
 [Sequenced steps with commit boundaries]
 ```
 
-## Output Management
-
-**Hard constraints:**
-- Segment output into groups: Prerequisites + Files first, then SQL + Config, then API + Functions, then Tests + Ambiguities + Order.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until the full specification is delivered.
-- If the target is too large for one session, state what was covered and what remains.
+## Output
 
 **Document reading strategy:**
 - Follow CLAUDE.md § Arc-gated reading. Only load documents the target references.

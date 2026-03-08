@@ -28,14 +28,9 @@ For every ghost dependency found:
 
 Present as an action list. No changes to files — document only.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output into groups of up to 8 ghost dependencies, ordered by "what breaks at 2am" severity.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until ALL ghost dependencies are reported. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
+Order findings by "what breaks at 2am" severity. State the total count when complete.
 
 What questions would I benefit from asking?
 

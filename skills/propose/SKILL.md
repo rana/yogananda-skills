@@ -83,7 +83,7 @@ Before delivering, verify:
 - Have I used tables, diagrams, or code blocks where they communicate more
   efficiently than prose?
 
-## Output Management
+## Output
 
 Write each movement incrementally. Continue until the full proposal is delivered.
 Quality over completeness — stop when adding more would dilute.

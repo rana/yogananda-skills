@@ -96,12 +96,9 @@ Map how the contracts connect:
 [How these contracts can grow without breaking changes]
 ```
 
-## Output Management
+## Output
 
-- Segment output: Consumers + first interface, then remaining interfaces, then Consistency + Integration
-- Write each segment incrementally
-- After each segment, continue immediately to the next
-- Continue until the full design is delivered
+Segment output: Consumers + first interface, then remaining interfaces, then Consistency + Integration.
 
 ## Constraints
 

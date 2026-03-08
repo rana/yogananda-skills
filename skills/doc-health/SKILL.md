@@ -63,14 +63,9 @@ For every finding:
 
 Present as a prioritized action list. No changes to files — document only.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output: Phase 1 findings first (max 8), then Phase 2 (max 8), then Phase 3 (max 8), then Synthesis.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until ALL findings across all phases and the synthesis are reported. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
+Present findings in phase order: Phase 1, then Phase 2, then Phase 3, then Synthesis. State the total count when complete.
 
 **Document reading strategy:**
 - Read CLAUDE.md, FEATURES.md index, and ROADMAP.md first for structural overview.

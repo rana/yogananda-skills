@@ -109,14 +109,10 @@ Order recommendations by severity, then by action type.
 - Maintenance cadence recommendation
 - What a second pass should focus on (if the corpus is too large for complete deep assessment)
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output: Part 1 (Corpus Map) first, then Part 2 (Recommendations) in groups of up to 8, then Part 3 (Summary)
-- Write each segment incrementally
-- After each segment, continue immediately to the next
-- Continue until ALL findings are reported; state total count when complete
-- If the corpus has 200+ specs, state what was assessed and what remains for a second pass
+- Deliver Part 1 (Corpus Map), then Part 2 (Recommendations), then Part 3 (Summary).
+- State total count when complete.
 
 What questions would I benefit from asking?
 

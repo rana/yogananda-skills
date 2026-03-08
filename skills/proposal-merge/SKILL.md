@@ -83,10 +83,8 @@ After all edits:
 - **Match existing voice.** Read adjacent FTR files. Match their tone, depth, and structure.
 - **FTR state markers.** New FTRs from proposals should carry appropriate state (approved for current-arc work, approved (provisional) for future-arc work, proposed for unscheduled). See FTR-084 for the classification.
 
-## Output Management
+## Output
 
-Segment edits into batches of up to 10 items, ordered by priority: high-priority items first (new FTRs, schema changes, arc deliverables), then lower-priority items (open questions, cross-reference wiring).
+Order by priority: high-priority items first (new FTRs, schema changes, arc deliverables), then lower-priority items (open questions, cross-reference wiring).
 
-Present each batch for approval before executing. After each approved batch is executed, proceed immediately to present the next batch. Continue until all edits are processed. State the total count when complete.
-
-Present the full decomposition before executing any batch. Do not execute without explicit approval.
+Present the full decomposition before executing. Do not execute without explicit approval. State the total count when complete.

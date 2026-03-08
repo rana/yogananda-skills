@@ -70,6 +70,6 @@ For the selected gate:
    - **Strengths** (what's working well)
 4. No changes to files — document only.
 
-## Output Management
+## Output
 
-If the combined analysis is extensive, deliver blocking issues first. Note remaining detail available on request.
+Deliver blocking issues first.

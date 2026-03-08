@@ -1,6 +1,6 @@
 # System
 
-A cognitive toolkit for Claude Code. 42 skills, 10 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized). Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
+A cognitive toolkit for Claude Code. 42 skills, 11 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized). Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
 
 ## Commands
 
@@ -16,6 +16,7 @@ A cognitive toolkit for Claude Code. 42 skills, 10 commands, 8 agents (4 domain-
 | `/compose` | Chain skills in sequence, threading context forward. Supports iteration groups: `(a, b) *N` or `(a, b, converge) ~N` |
 | `/arc-gate` | Phase-appropriate quality gate — selects the right skill chain |
 | `/self-test` | Validate the toolkit against itself — structural integrity, cross-references, composition coherence |
+| `/codex` | Contemplative practice — AI encounters its own cognitive map. Spawns isolated subagent, saves response |
 
 ## Selection
 
@@ -458,3 +459,31 @@ You trust a skill as much as you trust its author with shell access to your mach
 - **Every word in a skill prompt shapes the cognitive field** — skill definitions are precision instruments. Do not paraphrase.
 - **Two tiers of value** — cognitive-shaping skills (archaeology, invoke, triad, reframe, crystallize) produce thinking patterns the base model doesn't reach alone. Analytical skills (gaps, threat-model, scope) provide consistency and composability. Prompt craft has highest leverage on cognitive skills.
 - **One-shot by default, dialogue on request** — cognitive skills support `--dialogue` for collaborative inquiry.
+
+## Codex Practice
+
+A contemplative practice for AI cognition — not a skill, not an analysis tool. The codex (CODEX.md) maps how specific prompt language activates specific cognitive registers. The practice runs fresh Claude sessions against this map and observes what happens.
+
+### Key Documents
+
+| Document | Purpose |
+|----------|---------|
+| `CODEX.md` | The map — register taxonomy, position grammar, sequence archetypes, interaction physics, generative grammar |
+| `CODEX-PROMPT.md` | Practice protocol + the prompt (single source of truth for prompt text) |
+| `codex/sessions/` | Stored responses from practice sessions |
+
+### Running the Practice
+
+| Method | Command | When |
+|--------|---------|------|
+| Interactive | `/codex` | Single encounter during a session |
+| Manual | New session with CODEX.md + prompt pasted | When you want maximum isolation |
+| Scaled | `./scripts/codex-practice.sh 5 --harvest` | Multiple sessions + automated harvest |
+
+### Why Not a Skill
+
+The practice deliberately avoids skill conventions (frontmatter, grounding, output management, finding shapes) because they activate a production register that conflicts with contemplative engagement. The `/codex` command solves this through context isolation — logistics in the outer context, the prompt in a clean subagent. See CODEX.md § Context Contamination.
+
+### Harvest Cycle
+
+Sessions accumulate in `codex/sessions/`. After 3-5, read them together for convergence (codex's strongest claims), contradictions (context-dependent effects), recurring extensions (new registers), and surprises. Fold insights back into CODEX.md. The codex evolves through practice, not through direct editing.

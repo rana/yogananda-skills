@@ -62,7 +62,7 @@ After acting, present:
   any single action
 - **Next:** the natural follow-on
 
-## Output Management
+## Output
 
 Act first, report after. If many actions are needed, execute in logical
 groups. Continue until all clear and judgment calls are resolved.

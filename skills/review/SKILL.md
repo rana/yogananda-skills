@@ -63,10 +63,8 @@ Each finding includes:
 4. **Finding:** what's wrong or missing
 5. **Fix:** specific edit or question to resolve
 
-**Hard constraints:**
 - Maximum 15 findings per invocation. If more exist, report count and offer to continue.
 - Group by severity (critical first), not by dimension.
-- Write findings to REVIEW-AUDIT.md incrementally.
 - After completing the review, state: total findings, breakdown by dimension, breakdown by severity.
 - No file modifications — audit only.
 

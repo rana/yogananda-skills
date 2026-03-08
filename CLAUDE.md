@@ -1,6 +1,6 @@
 # SRF Cognitive Toolkit
 
-Cognitive infrastructure for the SRF Online Teachings Portal — 42 skills (36 analytical + 6 SRF mission), 10 commands, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
+Cognitive infrastructure for the SRF Online Teachings Portal — 42 skills (36 analytical + 6 SRF mission), 11 commands, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
 
 35 analytical skills are domain-agnostic (they analyze whatever project they're pointed at). 6 SRF mission skills are portal-specific (proposal management, mission alignment, seeker experience). 1 skill (ftr-curate) bridges both — domain-agnostic methodology with FTR-specific structural awareness. 4 domain-agnostic agents (architect, designer, builder, operator) work in any codebase. 4 SRF-specialized agents embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
 
@@ -20,20 +20,16 @@ Read all project markdown documents to ground in the project's actual state.
 ## <Analysis Protocol>
 [Methodology]
 
-## Output Management
-**Hard constraints:**
-- Segment output into groups of up to N findings
-- Write each segment incrementally
-- After each segment, continue immediately to the next
-- Continue until ALL findings are reported
+## Output
+[Skill-specific output guidance]
 
 [Closing questions]
 ```
 
 **Conventions that matter:**
 - "Read all project markdown documents" grounds in the SRF portal's docs: CLAUDE.md, PRINCIPLES.md, CONTEXT.md, DESIGN.md, DECISIONS.md, ROADMAP.md, PROPOSALS.md
-- Output management segments prevent token-limit timeouts; auto-continuation ensures completeness
-- Skills are read-only — they propose changes but never modify files. Exceptions: `land` (transitions analysis into action) and `ftr-curate` (FTR corpus operations with preview-by-default)
+- Output sections contain skill-specific guidance (ordering, segmentation, format) — not boilerplate
+- Skills are read-only — they propose changes but never modify files. Exceptions: `land` (transitions analysis into action), `ftr-curate` (FTR corpus operations with preview-by-default), and `codex harvest` (applies edits to CODEX.md, archives sessions)
 - Closing questions ("What am I not asking?") seed meta-cognition — functional, not decorative
 - "You have complete design autonomy" in cognitive skills unlocks creative capacity — it's a precision instrument
 - Skill prompts are precision instruments — specific wording produces measurably different cognitive behavior. Do not paraphrase when editing
@@ -79,7 +75,7 @@ Two tiers, different investment profiles:
 
 When editing or adding skills, verify:
 - Frontmatter has `name`, `description`, `argument-hint`
-- Output management section exists with segment size and auto-continue instruction
+- Output section exists with skill-specific guidance
 - No references to skills that don't exist (check `ls skills/`)
 - Cross-references between skills are accurate
 - **SYSTEM.md must be updated** when skills are added/removed/renamed or commands change behavior. SYSTEM.md is the human-facing reference — its selection matrix, composition examples, stage map, and skill counts must stay in sync.
@@ -91,12 +87,16 @@ srf/
 ├── .claude-plugin/plugin.json   # Plugin manifest
 ├── CLAUDE.md                    # AI context (this file)
 ├── SYSTEM.md                    # Human reference (selection matrix, composition guide)
+├── CODEX.md                     # Prompt design theory (register taxonomy, position grammar)
+├── CODEX-PROMPT.md              # Codex practice protocol and prompt (single source of truth)
 ├── README.md                    # Team usage guide
 ├── agents/                      # 8 agents (4 domain-agnostic + 4 SRF-specialized)
 ├── skills/                      # 42 skills (36 analytical + 6 SRF mission)
-├── commands/                    # 10 workflow commands
+├── commands/                    # 11 workflow commands
+├── codex/sessions/              # Codex practice responses (accumulated corpus)
 └── scripts/
-    └── sync-from-source.sh      # Sync from ~/.claude/ (for maintainers)
+    ├── sync-from-source.sh      # Sync from ~/.claude/ (for maintainers)
+    └── codex-practice.sh        # Run codex practice at scale (N sessions + harvest)
 ```
 
 ## Self-Maintenance

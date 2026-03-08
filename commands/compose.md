@@ -60,6 +60,6 @@ threading — each skill adds output that subsequent skills must process.
 For longer analysis, use `land` to harvest findings mid-chain, or run separate
 compose chains and synthesize manually.
 
-## Output Management
+## Output
 
-If the combined analysis is extensive, deliver the highest-priority cross-cutting findings first. Note remaining detail available on request.
+Deliver highest-priority cross-cutting findings first.

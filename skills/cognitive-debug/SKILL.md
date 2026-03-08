@@ -52,11 +52,4 @@ Trace the reasoning again with the corrective questions applied. Where does it l
 4. Corrected conclusion (where better reasoning leads)
 5. Pattern to watch for (the recurring failure mode to catch next time)
 
-## Output Management
-
-**Hard constraints:**
-- Segment output into groups of up to 5 breakpoints, prioritizing the earliest divergence point — fixing that often resolves downstream issues.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until the full reasoning trace, all breakpoints, corrective questions, and corrected path are reported.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
+Prioritize the earliest divergence point — fixing that often resolves downstream issues.

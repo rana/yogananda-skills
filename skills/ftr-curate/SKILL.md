@@ -195,12 +195,12 @@ Scan all `.md` files in `.elmer/proposals/`:
 - **Provenance always.** Every merge, split, and archive records where content came from and when.
 - **Preserve "What's Not Being Asked" sections fully.** These contain the highest-value insights.
 
-## Output Management
+## Output
 
-**Triage mode:** Part A (explorations) first, then Part B (FTR overlaps). Each in groups of up to 8 clusters.
+**Triage mode:** Part A (explorations) first, then Part B (FTR overlaps).
 
 **Compare mode:** Alignment table first, then dependency impact, then resolution proposal.
 
 **Write modes (merge/split/archive/synthesis):** Preview first. Execute only on approval. Report after execution.
 
-Write each segment incrementally. After each segment, continue immediately to the next. Continue until ALL findings are reported; state total count when complete.
+State total count when complete.

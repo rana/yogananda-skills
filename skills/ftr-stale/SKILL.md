@@ -96,14 +96,9 @@ After all findings, provide:
 3. **Triage list** — top 10 FTRs most in need of attention, ordered by combined severity
 4. **Maintenance recommendation** — suggested cadence for re-running this audit
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output: Dimension 1 findings first (groups of up to 10), then Dimension 2 (groups of up to 8), then Dimension 3 (groups of up to 8), then Summary.
-- Write each segment incrementally.
-- After each segment, continue immediately to the next.
-- Continue until ALL findings are reported; state total count when complete.
-- If the corpus is too large for complete assessment in one session, state what was covered and what remains.
+Present findings in dimension order: Dimension 1, then Dimension 2, then Dimension 3, then Summary. State the total count when complete.
 
 What questions would I benefit from asking?
 

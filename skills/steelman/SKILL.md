@@ -25,14 +25,10 @@ Then, and only then:
 
 Present the defense first, weaknesses second. The goal is to overcome the best case for status quo before proposing change — not to reflexively defend or attack.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Keep the defense concise. Segment into groups of up to 8 key arguments for the status quo.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until the full defense, remaining weaknesses, and decision threshold are all reported.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
+- Keep the defense concise.
+- Deliver the full defense, remaining weaknesses, and decision threshold.
 
 What questions would I benefit from asking?
 

@@ -69,13 +69,10 @@ End with:
 - **Top 3 risks** if proceeding
 - **Questions that need answers** before implementation
 
-## Output Management
+## Output
 
-- Segment findings into groups of up to 10, ordered by no-go items first
-- Write each segment incrementally — do not accumulate a single large response
-- After each segment, continue immediately to the next
-- Continue until ALL findings are reported; state total count when complete
-- If the analysis surface is too large, state what was covered and what remains
+Segment findings into groups of up to 10, ordered by no-go items first.
+If the analysis surface is too large, state what was covered and what remains.
 
 ## Constraints
 

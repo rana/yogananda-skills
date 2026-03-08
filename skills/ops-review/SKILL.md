@@ -26,15 +26,10 @@ For every gap or recommendation:
 
 Present as an action list. No changes to files — document only.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output into groups of up to 8 findings, ordered by launch-blocking gaps first.
+- Order by launch-blocking gaps first. State the total count when complete.
 - If no $ARGUMENTS focus area is given, evaluate only Deployment, Costs, and Monitoring — the operational core.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until ALL findings are reported. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
 - Read deployment config, infrastructure-as-code, and monitoring setup first. Skip application business logic.

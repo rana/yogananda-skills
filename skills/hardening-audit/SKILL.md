@@ -87,15 +87,10 @@ For every finding:
 
 Present as a prioritized checklist. No changes to files — document only.
 
-## Output Management
+## Output
 
-**Hard constraints:**
-- Segment output into groups of up to 10 findings, ordered by critical and high-severity gaps first.
+- Order by critical and high-severity gaps first. State the total count when complete.
 - If no $ARGUMENTS focus area is given, evaluate only sections 1 (HTTP Headers), 2 (Input Validation), and 3 (Secret Management) — the most commonly exploited surfaces.
-- Write each segment incrementally. Do not accumulate a single large response.
-- After completing each segment, continue immediately to the next. Do not wait for user input.
-- Continue until ALL findings are reported. State the total count when complete.
-- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
 - Read deployment config, middleware, and security-relevant code paths. Skip business logic unrelated to input/output boundaries.

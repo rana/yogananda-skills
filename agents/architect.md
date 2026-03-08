@@ -97,12 +97,9 @@ Produce an ADR-shaped recommendation:
 [Any divergence between stated and actual architecture observed during analysis]
 ```
 
-## Output Management
+## Output
 
-- Segment output: Forces + Options first, then Evaluation + Recommendation
-- Write each segment incrementally
-- After each segment, continue immediately to the next
-- Continue until the full assessment is delivered
+Segment output: Forces + Options first, then Evaluation + Recommendation.
 
 ## Constraints
 

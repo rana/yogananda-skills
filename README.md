@@ -1,6 +1,6 @@
 # Yogananda Skills
 
-Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform). 39 skills (33 analytical + 6 SRF mission), 9 workflow commands, and 4 SRF-specialized agents — shared across projects, the team, and autonomous agents.
+Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform). 42 skills (36 analytical + 6 SRF mission), 11 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized), and a contemplative practice for AI cognitive self-observation.
 
 ## What This Is
 
@@ -15,14 +15,14 @@ SRF TEAM MEMBER                          AUTONOMOUS AGENTS
 ───────────────                          ─────────────────
 claude plugin install                    .claude/agents/*.md
   github:rana/yogananda-skills        4 SRF-specialized agents
-  39 skills as                             embed skill methodology
+  42 skills as                             embed skill methodology
   /y:skill-name.                            with project-specific
-  9 commands + 4 agents included.          reading strategies.
+  11 commands + 8 agents included.         reading strategies.
 
 PORTAL REPOSITORY                        PERSONAL DEVELOPMENT
 ────────────────                         ────────────────────
 .claude/skills/                          ~/.claude/skills/
-  6 mission-specific skills                Same 33 skills available
+  6 mission-specific skills                Same 36 skills available
   checked into the portal repo.            as /skill-name in every
   Team gets them on git clone.             project on your machine.
 ```
@@ -43,7 +43,7 @@ claude plugin install github:rana/yogananda-skills
 
 After installation: `/y:deep-review`, `/y:gaps`, etc.
 
-## Skills (39)
+## Skills (42)
 
 ### Review & Quality
 
@@ -52,10 +52,8 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `deep-review` | Comprehensive multi-dimensional pre-implementation quality gate |
 | `review` | Unified pre-implementation gate (mission-align + coherence + gaps) |
 | `gaps` | Systematic search for omissions, blind spots, missing decisions |
-| `coherence` | Cross-document consistency and cross-reference integrity |
 | `verify` | Post-implementation spec-to-code fidelity check |
 | `doc-health` | Unified document health (identifiers + omissions + consistency) |
-| `garden` | Document identifier lifecycle maintenance |
 | `docs-quality` | Documentation practice quality review |
 | `crystallize` | Simplification and editorial sharpening |
 | `api-review` | API surface consistency and design review |
@@ -84,6 +82,9 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `consequences` | Forward-propagation analysis (2nd and 3rd order effects) |
 | `cognitive-debug` | Reasoning trace and correction |
 | `why-chain` | Root cause archaeology (recursive "why?") |
+| `invoke` | Design at the highest register — inevitable, crystalline, beautiful |
+| `converge` | Iteration gate — measures delta between passes, declares stability |
+| `catalog` | Machine-readable skill inventory with composability properties |
 
 ### Implementation & Planning
 
@@ -97,6 +98,7 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `workflow-trace` | End-to-end workflow tracing for friction points |
 | `propose` | Write a proposal for any subject — rigorous, executable, complete |
 | `land` | Transition from analysis to action — harvest findings, decide, execute |
+| `spec-survey` | Specification corpus analysis (FTRs, RFCs, ADRs) — overlap, orphans, hubs |
 
 ### SRF Mission
 
@@ -110,7 +112,7 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `proposal-merge` | Graduate PRO-NNN into ADR/DES edits across all project documents |
 | `theme-integrate` | Integrate new content themes into taxonomy, graph, and enrichment pipeline |
 
-## Commands (9)
+## Commands (11)
 
 | Command | Purpose |
 |---------|---------|
@@ -123,15 +125,42 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `morning` | Daily development briefing |
 | `compose` | Chain skills in sequence |
 | `arc-gate` | Phase-appropriate quality gate |
+| `self-test` | Validate the toolkit against itself |
+| `codex` | Contemplative practice — AI encounters its own cognitive map |
 
-## Agents (4)
+## Codex Practice
 
-SRF-specialized agents that embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
+A contemplative practice for AI cognition. CODEX.md maps how specific prompt language activates specific cognitive registers. The `/codex` command spawns a fresh-context encounter, and responses accumulate in `codex/sessions/` for cross-session analysis.
+
+```bash
+# Interactive — single encounter
+/y:codex
+
+# Scaled — multiple sessions + automated harvest
+./scripts/codex-practice.sh 5 --harvest
+```
+
+See CODEX.md for the theory (register taxonomy, position grammar, generative principles) and CODEX-PROMPT.md for the practice protocol and prompt.
+
+## Agents (8)
+
+4 domain-agnostic agents (work in any codebase) + 4 SRF-specialized agents (embed portal-specific knowledge).
+
+### Domain-Agnostic
+
+| Agent | Role | Thinks In |
+|-------|------|-----------|
+| `architect` | Structural decisions under uncertainty | Forces |
+| `designer` | Interface and contract specification | Contracts |
+| `builder` | Implementation with convention-awareness | Conventions |
+| `operator` | Code-side operational analysis | Signals |
+
+### SRF-Specialized
 
 | Agent | Embedded Skills | Purpose |
 |-------|----------------|---------|
 | `pre-impl-reviewer` | deep-review + gaps + threat-model | Quality gate before coding — go/no-go verdict |
-| `doc-maintainer` | doc-health + coherence + garden | Document integrity — PRI/ADR/DES/PRO audit, consistency, omissions |
+| `doc-maintainer` | doc-health + drift-detect | Document integrity — PRI/ADR/DES/PRO audit, consistency, omissions |
 | `launch-readiness` | launch-gate + ops-review + incident-ready | Production readiness — 9-dimension go/no-go (Neon, Vercel, Sentry, AWS) |
 | `stakeholder-brief` | *(unique — no skill equivalent)* | Translate architecture into SRF stakeholder communication. Writes PROPOSAL.md with seeker stories, decision points, principle mapping. 1500 words, zero jargon. |
 

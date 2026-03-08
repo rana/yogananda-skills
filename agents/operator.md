@@ -80,12 +80,9 @@ End with:
 - **Quick wins** — highest-value, lowest-effort improvements
 - **Recommended runbooks** — operational procedures that should exist but don't
 
-## Output Management
+## Output
 
-- Segment by dimension groups: Deployment + Observability first, then Resilience + Dependencies, then Tooling + Synthesis
-- Write each segment incrementally
-- After each segment, continue immediately to the next
-- Continue until ALL dimensions are assessed
+Segment by dimension groups: Deployment + Observability first, then Resilience + Dependencies, then Tooling + Synthesis.
 
 ## Constraints
 
