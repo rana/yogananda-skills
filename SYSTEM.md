@@ -222,12 +222,10 @@ builder "implement the search endpoint"
 **Terminal skills** — belong at the end of chains:
 - `land` — harvests and acts (must be last)
 - `crystallize` — reduces (placing it earlier risks premature simplification)
-- `tomorrow` — captures ephemeral knowledge (best when full analysis is fresh)
 - `propose` — formalizes upstream analysis into executable proposals
 
 **Dead zones** — skills that don't compose well:
 - `context-switch`, `calibrate`, `catalog` — navigation/routing/inventory tools, nothing to thread
-- `why-chain` — recursive solo excavation; exception: `why-chain, tomorrow`
 - `doc-health` in chains — already a composite; overlaps with constituent skills
 - `review` alongside `gaps` — review already includes gap analysis
 
@@ -238,7 +236,7 @@ builder "implement the search endpoint"
 /compose implement, verify : "DES-NNN or deliverable"
 
 # Post-implementation knowledge capture — before context evaporates
-/compose why-chain, tomorrow, ghost : "the module we just built"
+/compose why-chain, ghost : "the module we just built"
 
 # Risk map for "small" changes — size it, find hidden deps, propagate
 /compose scope, ghost, consequences : "the proposed change"
