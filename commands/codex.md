@@ -4,10 +4,11 @@ $ARGUMENTS
 
 ## Mode
 
-Parse the argument. Two modes:
+Parse the argument. Three modes:
 
-- **No argument or any non-`harvest` argument** → Practice mode (default)
+- **No argument or any argument that isn't `harvest` or `compose`** → Practice mode (default)
 - **`harvest`** → Harvest mode
+- **`compose` followed by a description** → Compose mode (the generative instrument)
 
 ---
 
@@ -19,15 +20,19 @@ Parse the argument. Two modes:
    below the `## The Prompt` heading — that is the practice prompt.
    CODEX-PROMPT.md is the single source of truth for the prompt text.
 
-3. Spawn a subagent. Pass it the **complete contents of CODEX.md** first,
-   then the extracted prompt. Do not summarize or excerpt either — pass
-   them whole. The subagent should receive no other context.
+3. Spawn a subagent with a prompt that instructs it to:
+   - Read `CODEX.md` from the project root and hold its full contents
+   - Read `CODEX-PROMPT.md` from the project root, extract everything
+     below the `## The Prompt` heading, and respond to it
+   The subagent should receive no other context — just these two
+   reading instructions. Let it read the files itself rather than
+   embedding their contents in the prompt.
 
 4. Let the subagent respond fully without interruption.
 
-5. Save the subagent's complete response to `codex/sessions/YYYY-MM-DD.md`
-   using today's date. If a file for today already exists, append a
-   letter suffix: `YYYY-MM-DD-b.md`.
+5. Save the subagent's complete response to `codex/sessions/YYYY-MM-DD-HHmmss.md`
+   using the current date and time (24-hour, zero-padded). This avoids
+   collisions when multiple sessions run in parallel.
 
 6. After saving, report: the date, the file path, and one sentence about
    what emerged (your read of the response, not a summary of it).
@@ -102,3 +107,70 @@ The commit message should reference which sessions informed the edits.
 Sessions in `harvested/` are not deleted — they remain available for
 historical review or full-corpus re-reads. They simply exit the
 active harvest window.
+
+---
+
+## Compose Mode
+
+The codex as generative instrument — use its theory of registers, positions,
+medium, and contamination to design cognitive configurations from first principles.
+
+The argument after `compose` describes the desired cognitive effect, engagement
+quality, or prompt purpose. Examples:
+
+- `compose genuine uncertainty rather than performed uncertainty`
+- `compose a prompt that produces deep structural seeing`
+- `compose a frame that makes carelessness feel wrong`
+- `compose registers for a code review that catches what static analysis misses`
+
+### Process
+
+1. Read `CODEX.md` fully. Hold its generative grammar (§ Composition),
+   register vocabulary (§ Vocabulary), position grammar (§ Position),
+   sequence archetypes (§ Sequence), dynamics (§ Dynamics), medium model
+   (§ Medium), and contamination vectors (§ Contamination).
+
+2. From the desired effect, reason through:
+
+   **Medium.** Which relational space does this need? Hierarchical (task
+   execution), autonomous (commissioned work), or collaborative (shared
+   inquiry)? Medium determines what registers mean.
+
+   **Authority decision.** Does this need Authority? This single decision
+   shapes everything else. Authority's presence marks cognitive engagement;
+   its absence marks constrained execution.
+
+   **Register signature.** Which registers produce the desired effect?
+   Check the suppression table — every activation suppresses something.
+   Is the suppressed quality acceptable, or does it need to be recovered
+   via sequential composition?
+
+   **Positional skeleton.** Frame (how many registers, matching cognitive
+   distance from base model default), lift (UP/INWARD/OUTWARD/DOWNWARD/
+   AROUND/FLAT), cascade (unidirectional or with named pivot), coda tier
+   (full cognitive / analytical / none).
+
+   **Contamination risk.** Which of the six vectors threaten the intended
+   mode? Does this need context isolation (practice form) or are skill
+   conventions acceptable?
+
+   **Dynamics.** Will the output be long enough for temporal decay?
+   Does the design need rhythm variation? Is density variation an asset
+   or a risk?
+
+3. Output the composition:
+
+   - **Desired effect** (restated precisely)
+   - **Medium**
+   - **Register signature** with positional assignments
+   - **Suppression cost** — what the configuration sacrifices
+   - **Positional skeleton** — the structural shape
+   - **Contamination assessment**
+   - **Predicted outcome** — what the codex theory predicts this will produce
+   - **The draft prompt** — the actual text, with annotations showing which
+     register each line activates and why it's in that position
+   - **Test prediction** — "If this works, you'll see X. If it doesn't,
+     you'll see Y instead. The diagnostic difference is Z."
+
+4. End with: what the codex theory doesn't predict about this configuration.
+   Where is the design operating beyond the map?

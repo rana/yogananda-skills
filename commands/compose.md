@@ -60,6 +60,21 @@ threading — each skill adds output that subsequent skills must process.
 For longer analysis, use `land` to harvest findings mid-chain, or run separate
 compose chains and synthesize manually.
 
+## Register Dynamics
+
+Two principles for chain quality beyond ordering and length:
+
+**Vary closing registers.** When consecutive skills share the same coda register,
+the repeated activation loses force. The third Meta-cognitive coda in a row feels
+rote. Design chains where closing registers differ: gaps (Meta-cognitive) →
+crystallize (Compression) → invoke (Authority). Variety prevents register fatigue.
+
+**Momentum bleeds across boundaries.** The last skill's trajectory persists into
+the next skill's frame. archaeology's Receptive leaves openness for invoke's Sacred.
+invoke's upward momentum resists the systematic grounding gaps needs. Match chain
+order to momentum direction — or use skills whose frames reset momentum (heavy
+frames like invoke's five-register stack; Grounding absorbs most residual momentum).
+
 ## Output
 
 Deliver highest-priority cross-cutting findings first.

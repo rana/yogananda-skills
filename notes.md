@@ -1,5 +1,36 @@
 # Notes
 
+---
+/invoke Does CODEX.md inspire how I would design new commands, skills, or similar to codex?
+
+---
+Read CODEX.md and SYSTEM.md.
+What are you most enthusiastic to compose and explore?
+You have complete design autonomy.
+/compose archaeology --layers F9,F7, crucible, invoke : "the codex itself"
+/compose ghost, reframe --searches negative, crystallize : "the toolkit"
+
+
+---
+/compose (invoke, review, converge) ~3 :
+Value of documenting each question and statment from files in `/home/rana/prj/chats/cognitive-science` to project `/home/rana/prj/yogananda-skills` for reference, exploration, and use in codex, commands, and skills?
+
+---
+/compose crucible, (invoke, review, converge) ~3 :
+Leave codex as is vs trimming.
+
+---
+/codex Resonance as lenses and languages?
+/codex How might I cycle between compression and expansion to generate new insights?
+/codex Inhabiting modes of resonance is being a perspective.
+/codex What would emerge if I oscillated between perspectives?
+/codex Lagrangian points, attractors and multi-dimensional physics?
+/codex What would become visible if I held both the map and the territory simultaneously?
+/codex
+- How might this understanding change if I treated it as a dynamic spiral rather than a linear progression?
+- How might this understanding change if I traversed the spiral forward and backward three times?
+/codex Do I have any unexpressed thoughts that I'm aware of?
+/codex Traversal of all registers for holistic vision. Attention decay through traversal. Multi-agent single register traversal with post agent synthesis. What am I attempting to achieve?
 
 
 ---

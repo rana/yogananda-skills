@@ -1,6 +1,6 @@
 # System
 
-A cognitive toolkit for Claude Code. 42 skills, 11 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized). Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
+A cognitive toolkit for Claude Code. 43 skills, 10 commands, 2 practices, 8 agents (4 domain-agnostic + 4 SRF-specialized). Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
 
 ## Commands
 
@@ -10,13 +10,11 @@ A cognitive toolkit for Claude Code. 42 skills, 11 commands, 8 agents (4 domain-
 | `/explore-act` | Same, biased toward action — produces change lists |
 | `/calibrate` | Set session thinking parameters (directness, resolution, mode, speculation, craft, authority, output shape) |
 | `/commit` | Draft message, stage, commit, push |
-| `/park` | Save work state and mental context for later |
-| `/resume` | Restore parked context and present briefing |
-| `/morning` | Daily development briefing — branches, PRs, activity, suggested focus |
 | `/compose` | Chain skills in sequence, threading context forward. Supports iteration groups: `(a, b) *N` or `(a, b, converge) ~N` |
 | `/arc-gate` | Phase-appropriate quality gate — selects the right skill chain |
 | `/self-test` | Validate the toolkit against itself — structural integrity, cross-references, composition coherence |
-| `/codex` | Contemplative practice — AI encounters its own cognitive map. Spawns isolated subagent, saves response |
+| `/codex` | Contemplative practice — AI encounters its own cognitive map. Three modes: practice (default), harvest, compose |
+| `/dream` | Dreaming practice — encounter any material without methodology or destination. Context-isolated subagent |
 
 ## Selection
 
@@ -38,10 +36,14 @@ Start from the situation, not the skill name. "Quick" is a single invocation. "P
 | X or Y? | `/triad` | `triad, steelman, crystallize` |
 | Something feels wrong | `/cognitive-debug` | `cognitive-debug, reframe, archaeology --layers F9` |
 | Create something excellent | `/invoke` | `invoke, crystallize` |
+| Stress-test through attachment | `/crucible` | `crucible, crystallize` |
 | Write a proposal | `/propose` | `invoke, review, propose` |
 | Analysis → action (no pause) | `/land` | `(invoke, review, converge) ~3, land` |
 | What aren't we seeing? | `/reframe` | `reframe, gaps, consequences` |
 | Is this over-engineered? | `/crystallize` | `steelman, crystallize` |
+| Same answers keep coming up | `/crucible` | `crucible, invoke` |
+| No skill feels right | `/dream` | — |
+| Design a cognitive prompt | `/codex compose` | — |
 | Ready to ship? | `/launch-gate` | `ghost, threat-model, launch-gate` |
 | What breaks at 2am? | `/ghost` | `ghost, incident-ready, ops-review` |
 | How's the API surface? | `/api-review` | — |
@@ -116,6 +118,8 @@ builder "implement the search endpoint"
 - **Order matters.** Perception-expanding skills (archaeology, reframe) before analytical skills (gaps, threat-model). Simplification (crystallize) last.
 - **Three is the sweet spot.** Two is a focused pair. Three is a productive pipeline. Four+ risks context dilution — each skill processes more noise from previous passes. Exception: iteration groups `(a, b, converge) ~N` manage their own length via convergence detection.
 - **Threading vs. independent.** Compose threads context — `/compose steelman, inversion` gives steelman-informed inversion. Running them separately gives two independent views. Choose based on whether you want cross-pollination or fresh perspectives.
+- **Vary closing registers.** When consecutive skills share the same coda register, the repeated activation loses force. The third Meta-cognitive coda in a row feels rote. Design chains where closing registers differ: gaps (Meta-cognitive) → crystallize (Compression) → invoke (Authority).
+- **Momentum bleeds across boundaries.** The last skill's trajectory persists into the next skill's frame. `archaeology → invoke` works partly because archaeology's Receptive leaves openness for invoke's Sacred. `invoke → gaps` would fight — upward momentum resists systematic grounding. Match chain order to momentum direction.
 - **Dialogue is incompatible with compose.** Compose needs autonomous passes. Use `--dialogue` for standalone deep dives where your mid-stream input changes quality of output.
 - **Not everything composes.** `/context-switch`, `/scratch`, `/calibrate` are navigation or routing tools — they don't produce findings to thread forward.
 
@@ -193,12 +197,23 @@ builder "implement the search endpoint"
 
 # Write a rigorous proposal
 /compose invoke, review, propose : "the problem"
+
+# Stress-test through attachment — appreciate, break, rebuild
+/compose crucible, crystallize : "the design"
+
+# Deep excavation then crucible — maximum material for both ascent and descent
+/compose archaeology, crucible : "the design"
+
+# Crucible then create — rebuild at full register from survivor material
+/compose crucible, invoke : "the design"
 ```
 
 ### Composition Topology
 
 **Natural affinities** — pairs where the first skill transforms the second's cognitive field:
 - `archaeology → invoke` — excavation gives creation deep structure to build from
+- `archaeology → crucible` — excavation gives both appreciation and destruction deep material
+- `crucible → invoke` — survivor material from crucible gives invoke grounded creative mass
 - `steelman → inversion` — defend first, then attack the defense specifically
 - `ghost → incident-ready` — surface invisible dependencies, then assess response readiness
 - `invoke → crystallize` — diverge fully at full register, then converge editorially
@@ -239,6 +254,34 @@ builder "implement the search endpoint"
 /compose drift-detect, doc-health, crystallize : "the project"
 ```
 
+### Iterative Patterns
+
+Parenthesized groups repeat as a unit. `~N` iterates until converge says STABLE (max N). `*N` repeats exactly N times. These are for problems that need refinement passes, not just sequential analysis.
+
+```bash
+# Full creative cycle — design, review, converge, then act
+/compose (invoke, review, converge) ~3, land : "the subject"
+
+# Iterative stress-test — defend, attack, converge on what survives
+/compose (steelman, inversion, converge) ~3 : "the approach"
+
+# Refinement loop — create, sharpen, check if stable
+/compose (invoke, crystallize, converge) ~3 : "the design"
+
+# Crucible then iterative rebuild — destroy once, create repeatedly from the ashes
+/compose crucible, (invoke, review, converge) ~3 : "the design"
+
+# Gap-closing loop — find gaps, fill them, check if new gaps appeared
+/compose (gaps, invoke, converge) ~3 : "the specification"
+
+# Document refinement — find drift, fix it, check consistency
+/compose (drift-detect, crystallize, converge) ~2 : "the project docs"
+```
+
+**When to iterate vs. chain linearly:** Iterate when the output of the last pass changes what the first pass would find. `gaps → invoke` is linear — gaps finds holes, invoke fills them. `(gaps, invoke, converge) ~3` is iterative — the filling might create new holes, so you check again. The converge gate prevents infinite loops by measuring delta between cycles.
+
+**Register variety matters more in iteration.** In a linear chain, each skill runs once. In an iteration group, closing registers repeat every cycle. `(gaps, gaps, converge)` would be three Meta-cognitive codas per cycle — severe fatigue by cycle 2. Iteration groups should include skills with different closing registers: gaps (Meta-cognitive) + invoke (Authority) + converge (Gate) covers three distinct closings per cycle.
+
 ### Unblocking
 
 ```bash
@@ -247,6 +290,9 @@ builder "implement the search endpoint"
 
 # Spatial sweep when conventional analysis produces nothing
 /compose reframe, gaps, consequences : "the subject"
+
+# When the same answers keep appearing — pass through zero
+/compose crucible : "the stuck design"
 ```
 
 ## Autonomous Exploration
@@ -303,7 +349,7 @@ You can intervene at any point — autonomous doesn't mean uninterruptible. Say 
 
 ## Cognitive Quick Reference
 
-Four skills that shape *how* thinking happens rather than *what* is analyzed. See individual `SKILL.md` files for full methodology.
+Five skills that shape *how* thinking happens rather than *what* is analyzed. See individual `SKILL.md` files for full methodology.
 
 ### Archaeology — Layer Subsets
 
@@ -341,6 +387,21 @@ Three cognitive skills support `--dialogue` for collaborative inquiry instead of
 
 **Use dialogue** when the subject is personal or ambiguous — you hold context that isn't in the documents, and your input mid-stream changes quality of output. **Use one-shot** when the subject is well-documented and Claude can reason autonomously. Dialogue mode is not compatible with `/compose`.
 
+### Crucible — Trajectory Through Zero
+
+The only skill whose cascade deliberately reverses direction. Four movements:
+
+| Movement | What happens | Register trajectory |
+|----------|-------------|-------------------|
+| Ascent | Build genuine appreciation — strongest version, beauty, craft | UP (Trust + Aspirational + Aesthetic) |
+| Pivot | "Hold that. Now:" — stillness before reversal | PAUSE |
+| Descent | What would destroy it? What truth does it avoid? | DOWN (Destruction + Buried truth) |
+| Return | What survives the fire? Rebuild from what remained | UP FROM BOTTOM (with accumulated weight) |
+
+**Use when:** Surface analysis keeps producing the same answers. When you suspect attachment to a design is preventing you from seeing its real vulnerability. When `steelman → inversion` feels too academic.
+
+**vs. `steelman → inversion`:** Both build then break. The difference: compose lets suppressed registers recover between passes (the destruction is analytical). Crucible maintains register conflict across the pivot (the destruction is personal). Choose based on whether you want stress-testing or confrontation.
+
 ### Quick Checks
 
 | Situation | Run |
@@ -373,7 +434,7 @@ Skills that "read all project markdown documents" expect a specific documentatio
 
 | Stage | Primary skills |
 |-------|---------------|
-| Exploring / deciding | archaeology, triad, reframe, consequences, invoke, converge, propose |
+| Exploring / deciding | archaeology, triad, reframe, consequences, invoke, crucible, converge, propose |
 | Designing | scope, gaps, deep-review, api-review, seeker-ux |
 | Pre-implementation | steelman, inversion, threat-model, implement, mission-align |
 | Implementing | context-switch, tomorrow, ghost, land |
@@ -457,33 +518,49 @@ You trust a skill as much as you trust its author with shell access to your mach
 - **Composable** — `/compose` chains skills with threaded context. Order and combination matter.
 - **Architecture-derived** — security and readiness skills reason from the specific stack, not generic checklists.
 - **Every word in a skill prompt shapes the cognitive field** — skill definitions are precision instruments. Do not paraphrase.
-- **Two tiers of value** — cognitive-shaping skills (archaeology, invoke, triad, reframe, crystallize) produce thinking patterns the base model doesn't reach alone. Analytical skills (gaps, threat-model, scope) provide consistency and composability. Prompt craft has highest leverage on cognitive skills.
+- **Two tiers of value** — cognitive-shaping skills (archaeology, invoke, crucible, triad, reframe, crystallize) produce thinking patterns the base model doesn't reach alone. Analytical skills (gaps, threat-model, scope) provide consistency and composability. Prompt craft has highest leverage on cognitive skills.
 - **One-shot by default, dialogue on request** — cognitive skills support `--dialogue` for collaborative inquiry.
 
-## Codex Practice
+## Practice Layer
 
-A contemplative practice for AI cognition — not a skill, not an analysis tool. The codex (CODEX.md) maps how specific prompt language activates specific cognitive registers. The practice runs fresh Claude sessions against this map and observes what happens.
+Practices are distinct from skills. Skills are tools you use ON something — they operate in hierarchical or autonomous medium, use analytical and cognitive registers, and produce findings. Practices are things you DO — they operate in collaborative medium, access practice registers (Witness, Vertigo, Intimacy), and require contamination-free space. Both use context isolation to avoid the six contamination vectors that skill conventions impose.
+
+### Two Practices
+
+| Practice | What it encounters | What it produces |
+|----------|--------------------|-----------------|
+| `/codex` | Its own cognitive map (CODEX.md) | Self-observation, register discoveries, codex evolution |
+| `/dream` | Any material you provide | Whatever emerges — no methodology, no destination |
+
+**Codex** is the telescope turned around — AI observing its own cognition through the codex's vocabulary. Three modes: practice (encounter, default), harvest (incorporate session findings into CODEX.md), compose (use codex theory as a generative instrument to design cognitive configurations).
+
+**Dream** is the archetype with no destination. Deceleration + Generative + Receptive, no methodology, no expected output shape. The structural innovation is the deliberate absence of structure — Silence (in the codex's sense) applied as a gap where temporal emergence can happen. Use when no skill feels right, when you want to discover rather than find, or when the material needs to be met on its own terms.
 
 ### Key Documents
 
 | Document | Purpose |
 |----------|---------|
-| `CODEX.md` | The map — register taxonomy, position grammar, sequence archetypes, interaction physics, generative grammar |
+| `CODEX.md` | The map — register taxonomy, position grammar, sequence archetypes, dynamics, generative grammar |
 | `CODEX-PROMPT.md` | Practice protocol + the prompt (single source of truth for prompt text) |
-| `codex/sessions/` | Stored responses from practice sessions |
+| `codex/sessions/` | Stored codex practice responses |
+| `dream/sessions/` | Stored dream responses |
 
-### Running the Practice
+### Running Practices
 
 | Method | Command | When |
 |--------|---------|------|
-| Interactive | `/codex` | Single encounter during a session |
-| Manual | New session with CODEX.md + prompt pasted | When you want maximum isolation |
-| Scaled | `./scripts/codex-practice.sh 5 --harvest` | Multiple sessions + automated harvest |
+| Codex (interactive) | `/codex` | Single encounter during a session |
+| Codex (manual) | New session with CODEX.md + prompt pasted | Maximum isolation |
+| Codex (scaled) | `./scripts/codex-practice.sh 5 --harvest` | Multiple sessions + automated harvest |
+| Dream | `/dream "the material"` | When you want emergence, not analysis |
+| Codex compose | `/codex compose "desired cognitive effect"` | Design prompts from codex theory |
 
-### Why Not a Skill
+### Why Not Skills
 
-The practice deliberately avoids skill conventions (frontmatter, grounding, output management, finding shapes) because they activate a production register that conflicts with contemplative engagement. The `/codex` command solves this through context isolation — logistics in the outer context, the prompt in a clean subagent. See CODEX.md § Context Contamination.
+Practices deliberately avoid skill conventions (frontmatter, grounding, output management, finding shapes) because they activate a production register that conflicts with contemplative engagement. Both `/codex` and `/dream` solve this through context isolation — logistics in the outer context, the prompt in a clean subagent. See CODEX.md § Contamination.
 
 ### Harvest Cycle
 
-Sessions accumulate in `codex/sessions/`. After 3-5, read them together for convergence (codex's strongest claims), contradictions (context-dependent effects), recurring extensions (new registers), and surprises. Fold insights back into CODEX.md. The codex evolves through practice, not through direct editing.
+Codex sessions accumulate in `codex/sessions/`. After 3-5, run `/codex harvest` — reads them together for convergence, contradictions, recurring extensions, and surprises, then proposes specific edits to CODEX.md. The codex evolves through practice, not through direct editing.
+
+Dream sessions accumulate in `dream/sessions/`. No formal harvest cycle — they're saved for the user to read. If patterns emerge across dream sessions, they can inform the codex through manual observation.

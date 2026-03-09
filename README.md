@@ -1,6 +1,6 @@
 # Yogananda Skills
 
-Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform). 42 skills (36 analytical + 6 SRF mission), 11 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized), and a contemplative practice for AI cognitive self-observation.
+Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform). 43 skills (37 analytical + 6 SRF mission), 11 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized), and a contemplative practice for AI cognitive self-observation.
 
 ## What This Is
 
@@ -15,14 +15,14 @@ SRF TEAM MEMBER                          AUTONOMOUS AGENTS
 ───────────────                          ─────────────────
 claude plugin install                    .claude/agents/*.md
   github:rana/yogananda-skills        4 SRF-specialized agents
-  42 skills as                             embed skill methodology
+  43 skills as                             embed skill methodology
   /y:skill-name.                            with project-specific
   11 commands + 8 agents included.         reading strategies.
 
 PORTAL REPOSITORY                        PERSONAL DEVELOPMENT
 ────────────────                         ────────────────────
 .claude/skills/                          ~/.claude/skills/
-  6 mission-specific skills                Same 36 skills available
+  6 SRF mission skills                Same 36 skills available
   checked into the portal repo.            as /skill-name in every
   Team gets them on git clone.             project on your machine.
 ```
@@ -43,7 +43,7 @@ claude plugin install github:rana/yogananda-skills
 
 After installation: `/y:deep-review`, `/y:gaps`, etc.
 
-## Skills (42)
+## Skills (43)
 
 ### Review & Quality
 
@@ -83,6 +83,7 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `cognitive-debug` | Reasoning trace and correction |
 | `why-chain` | Root cause archaeology (recursive "why?") |
 | `invoke` | Design at the highest register — inevitable, crystalline, beautiful |
+| `crucible` | Stress-test through attachment — appreciate, break, rebuild from what survives |
 | `converge` | Iteration gate — measures delta between passes, declares stability |
 | `catalog` | Machine-readable skill inventory with composability properties |
 
@@ -200,11 +201,24 @@ Skills compose via `/compose`. Order matters — perception-expanding before ana
 
 # Write a proposal
 /compose y:invoke, y:review, y:propose : "the problem"
+
+# Stress-test through attachment — appreciate, break, rebuild
+/compose y:crucible, y:crystallize : "the design"
+```
+
+Parenthesized groups iterate: `(a, b, converge) ~3` repeats until converge says STABLE, max 3 cycles.
+
+```bash
+# Iterative creative cycle — design, review, converge, then act
+/compose (y:invoke, y:review, y:converge) ~3, y:land : "the subject"
+
+# Iterative stress-test — defend, attack, converge on what survives
+/compose (y:steelman, y:inversion, y:converge) ~3 : "the approach"
 ```
 
 Append `land` as the final skill to transition from analysis to action without pausing. `land` harvests all findings, triages into clear/judgment/human calls, and acts on the first two.
 
-Three is the sweet spot. Four+ risks context dilution. See SYSTEM.md for the full selection matrix and composition guide.
+Three skills per chain (or per iteration group) is the sweet spot. See SYSTEM.md for the full selection matrix, iterative patterns, and composition guide.
 
 ## Environment Contract
 

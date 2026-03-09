@@ -52,8 +52,7 @@ echo ""
 SESSION_FILES=()
 
 for i in $(seq 1 "$COUNT"); do
-  SUFFIX=$(printf "%03d" "$i")
-  SESSION_FILE="$SESSIONS_DIR/${TODAY}-${SUFFIX}.md"
+  SESSION_FILE="$SESSIONS_DIR/$(date +%Y-%m-%d-%H%M%S).md"
 
   echo "--- Session $i of $COUNT ---"
 
@@ -107,7 +106,7 @@ $(cat "$f")
 $(cat "$CODEX")
 "
 
-  HARVEST_FILE="$SESSIONS_DIR/${TODAY}-harvest.md"
+  HARVEST_FILE="$SESSIONS_DIR/$(date +%Y-%m-%d-%H%M%S)-harvest.md"
   echo "$HARVEST_INPUT" | claude --print --output-format text > "$HARVEST_FILE" 2>/dev/null
 
   LINES=$(wc -l < "$HARVEST_FILE")
@@ -116,4 +115,4 @@ fi
 
 echo ""
 echo "Done. $COUNT session(s) in $SESSIONS_DIR/"
-$HARVEST && echo "Harvest proposals: ${TODAY}-harvest.md — review before applying to CODEX.md."
+$HARVEST && echo "Harvest proposals saved — review before applying to CODEX.md."

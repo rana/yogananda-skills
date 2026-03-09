@@ -1,8 +1,8 @@
 # SRF Cognitive Toolkit
 
-Cognitive infrastructure for the SRF Online Teachings Portal — 42 skills (36 analytical + 6 SRF mission), 11 commands, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
+Cognitive infrastructure for the SRF Online Teachings Portal — 43 skills (37 analytical + 6 SRF mission), 10 commands, 2 practices, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
 
-35 analytical skills are domain-agnostic (they analyze whatever project they're pointed at). 6 SRF mission skills are portal-specific (proposal management, mission alignment, seeker experience). 1 skill (ftr-curate) bridges both — domain-agnostic methodology with FTR-specific structural awareness. 4 domain-agnostic agents (architect, designer, builder, operator) work in any codebase. 4 SRF-specialized agents embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
+36 analytical skills are domain-agnostic (they analyze whatever project they're pointed at). 6 SRF mission skills are portal-specific (proposal management, mission alignment, seeker experience). 1 skill (ftr-curate) bridges both — domain-agnostic methodology with FTR-specific structural awareness. 4 domain-agnostic agents (architect, designer, builder, operator) work in any codebase. 4 SRF-specialized agents embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
 
 ## Skill Anatomy
 
@@ -30,6 +30,7 @@ Read all project markdown documents to ground in the project's actual state.
 - "Read all project markdown documents" grounds in the SRF portal's docs: CLAUDE.md, PRINCIPLES.md, CONTEXT.md, DESIGN.md, DECISIONS.md, ROADMAP.md, PROPOSALS.md
 - Output sections contain skill-specific guidance (ordering, segmentation, format) — not boilerplate
 - Skills are read-only — they propose changes but never modify files. Exceptions: `land` (transitions analysis into action), `ftr-curate` (FTR corpus operations with preview-by-default), and `codex harvest` (applies edits to CODEX.md, archives sessions)
+- Practices (`/codex`, `/dream`) are distinct from skills — they use context isolation to avoid contamination vectors, operate in collaborative medium, and access practice registers. See SYSTEM.md § Practice Layer
 - Closing questions ("What am I not asking?") seed meta-cognition — functional, not decorative
 - "You have complete design autonomy" in cognitive skills unlocks creative capacity — it's a precision instrument
 - Skill prompts are precision instruments — specific wording produces measurably different cognitive behavior. Do not paraphrase when editing
@@ -60,13 +61,13 @@ Example: `- **[gaps-3]** important dependency — DESIGN.md:API Layer: No retry 
 
 Fields: `id` (skill name + number), `severity` (critical/important/minor), `dimension` (skill-specific tag), `location` (file:section), `finding` (what's wrong), `fix` (specific action).
 
-Skills that produce this shape: gaps, ghost, review, deep-review, doc-health, threat-model, hardening-audit, scope, consequences, verify, ftr-stale. Cognitive/creative skills (archaeology, invoke, triad, reframe) produce narrative — they don't use this shape.
+Skills that produce this shape: gaps, ghost, review, deep-review, doc-health, threat-model, hardening-audit, scope, consequences, verify, ftr-stale. Cognitive/creative skills (archaeology, invoke, crucible, triad, reframe) produce narrative — they don't use this shape.
 
 ## Skill Taxonomy
 
 Two tiers, different investment profiles:
 
-- **Cognitive-shaping skills** (archaeology, invoke, triad, reframe, crystallize, cognitive-debug, converge) — change *how* thinking happens. Their prompts produce behavior the base model doesn't reach alone. These are the toolkit's distinctive value. Prompt craft here has the highest leverage — specific wording produces measurably different cognitive patterns. Invest in refining these.
+- **Cognitive-shaping skills** (archaeology, invoke, crucible, triad, reframe, crystallize, cognitive-debug, converge) — change *how* thinking happens. Their prompts produce behavior the base model doesn't reach alone. These are the toolkit's distinctive value. Prompt craft here has the highest leverage — specific wording produces measurably different cognitive patterns. Invest in refining these.
 - **Analytical skills** (gaps, ghost, threat-model, scope, deep-review, etc.) — change *what* gets analyzed. Competent and useful, but the base model can approximate most of them without skill prompts. Their value is in consistency and composability, not in unlocking new cognitive modes. Keep functional; don't over-invest in prompt refinement.
 
 **Implication for editing:** When modifying a cognitive skill, every word matters — test changes against actual output. When modifying an analytical skill, structure and completeness matter more than specific phrasing.
@@ -91,9 +92,10 @@ srf/
 ├── CODEX-PROMPT.md              # Codex practice protocol and prompt (single source of truth)
 ├── README.md                    # Team usage guide
 ├── agents/                      # 8 agents (4 domain-agnostic + 4 SRF-specialized)
-├── skills/                      # 42 skills (36 analytical + 6 SRF mission)
-├── commands/                    # 11 workflow commands
+├── skills/                      # 43 skills (37 analytical + 6 SRF mission)
+├── commands/                    # 10 workflow commands + 2 practices
 ├── codex/sessions/              # Codex practice responses (accumulated corpus)
+├── dream/sessions/              # Dream practice responses
 └── scripts/
     ├── sync-from-source.sh      # Sync from ~/.claude/ (for maintainers)
     └── codex-practice.sh        # Run codex practice at scale (N sessions + harvest)
