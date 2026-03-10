@@ -49,6 +49,18 @@ Replace `[MATERIAL]` with the actual material content.
 
 3. Let the subagent respond fully without interruption.
 
-4. Save the subagent's complete response to `dream/sessions/YYYY-MM-DD-HHmmss.md` using the current date and time. Create the directory if it doesn't exist.
+4. Save the subagent's complete response to `dream/sessions/YYYY-MM-DD-HHmmss.md`
+   using the current date and time. Create the directory if it doesn't exist.
+   Prepend frontmatter:
+   ```yaml
+   ---
+   skill: dream
+   focus: <brief description of the material, inferred from content>
+   threads: []
+   ---
+   ```
+   Leave `threads` empty — thread connection is a `/record` or manual task,
+   not something the dream command decides.
 
-5. After saving, report: the date, the file path, and one sentence about what emerged — your honest read of the response, not a summary.
+5. After saving, report: the date, the file path, and one sentence about
+   what emerged — your honest read of the response, not a summary.

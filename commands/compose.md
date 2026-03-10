@@ -75,6 +75,11 @@ invoke's upward momentum resists the systematic grounding gaps needs. Match chai
 order to momentum direction — or use skills whose frames reset momentum (heavy
 frames like invoke's five-register stack; Grounding absorbs most residual momentum).
 
+## Persistence
+
+After presenting the unified summary, remind: "Run `/record` to save this to the
+session archive." Do not auto-save — the user decides what's worth keeping.
+
 ## Output
 
 Deliver highest-priority cross-cutting findings first.
