@@ -1,6 +1,6 @@
 # SRF Cognitive Toolkit
 
-Cognitive infrastructure for the SRF Online Teachings Portal — 43 skills (37 analytical + 6 SRF mission), 10 commands, 2 practices, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
+Cognitive infrastructure for the SRF Online Teachings Portal — 43 skills (37 analytical + 6 SRF mission), 11 commands, 2 practices, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
 
 36 analytical skills are domain-agnostic (they analyze whatever project they're pointed at). 6 SRF mission skills are portal-specific (proposal management, mission alignment, seeker experience). 1 skill (ftr-curate) bridges both — domain-agnostic methodology with FTR-specific structural awareness. 4 domain-agnostic agents (architect, designer, builder, operator) work in any codebase. 4 SRF-specialized agents embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
 
@@ -27,7 +27,7 @@ Read all project markdown documents to ground in the project's actual state.
 ```
 
 **Conventions that matter:**
-- "Read all project markdown documents" grounds in the SRF portal's docs: CLAUDE.md, PRINCIPLES.md, CONTEXT.md, DESIGN.md, DECISIONS.md, ROADMAP.md, PROPOSALS.md
+- "Read all project markdown documents" grounds in the SRF portal's docs: CLAUDE.md, PRINCIPLES.md, CONTEXT.md, ROADMAP.md, features/FEATURES.md, and relevant FTR files
 - Output sections contain skill-specific guidance (ordering, segmentation, format) — not boilerplate
 - Skills are read-only — they propose changes but never modify files. Exceptions: `land` (transitions analysis into action), `ftr-curate` (FTR corpus operations with preview-by-default), and `codex harvest` (applies edits to CODEX.md, archives sessions)
 - Practices (`/codex`, `/dream`) are distinct from skills — they use context isolation to avoid contamination vectors, operate in collaborative medium, and access practice registers. See SYSTEM.md § Practice Layer
@@ -42,12 +42,11 @@ Skills expect the SRF portal's documentation architecture:
 | Document | What skills use it for |
 |----------|----------------------|
 | `CLAUDE.md` | Project rules, principles, identifier conventions, code layout |
-| `PRINCIPLES.md` | The 11 immutable commitments (PRI-01 through PRI-11) |
+| `PRINCIPLES.md` | The 12 immutable commitments (PRI-01 through PRI-12) |
 | `CONTEXT.md` | Current state, open questions, methodology, stakeholders |
-| `DESIGN.md` | Architecture index + cross-cutting sections; individual specs in `design/` |
-| `DECISIONS.md` | ADR index; bodies in DECISIONS-core.md, -experience.md, -operations.md |
-| `ROADMAP.md` | 3 arcs, milestones, deliverables (M-notation), success criteria |
-| `PROPOSALS.md` | PRO-NNN registry, graduation protocol, scheduling lifecycle |
+| `features/FEATURES.md` | Unified FTR index across 5 domains |
+| `features/{domain}/FTR-NNN-*.md` | Individual feature specs (165 files across foundation, search, experience, editorial, operations) |
+| `ROADMAP.md` | Current milestone first, deliverables (M-notation), success criteria |
 
 ## Finding Shape Convention
 

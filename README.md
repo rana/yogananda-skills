@@ -1,6 +1,6 @@
 # Yogananda Skills
 
-Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform). 43 skills (37 analytical + 6 SRF mission), 11 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized), and a contemplative practice for AI cognitive self-observation.
+Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform). 43 skills (37 analytical + 6 SRF mission), 11 commands, 8 agents (4 domain-agnostic + 4 SRF-specialized), and contemplative practices for AI cognitive self-observation.
 
 ## What This Is
 
@@ -14,17 +14,17 @@ Agents are SRF-specialized configurations that embed skill methodology with proj
 SRF TEAM MEMBER                          AUTONOMOUS AGENTS
 ───────────────                          ─────────────────
 claude plugin install                    .claude/agents/*.md
-  github:rana/yogananda-skills        4 SRF-specialized agents
-  43 skills as                             embed skill methodology
-  /y:skill-name.                            with project-specific
-  11 commands + 8 agents included.         reading strategies.
+  github:rana/yogananda-skills        6 agents in portal repo
+  43 skills as /y:skill-name.             (4 SRF-specialized +
+  11 commands + 8 agents included.         2 project-aware overrides
+                                           of builder & operator).
 
 PORTAL REPOSITORY                        PERSONAL DEVELOPMENT
 ────────────────                         ────────────────────
-.claude/skills/                          ~/.claude/skills/
-  6 SRF mission skills                Same 36 skills available
-  checked into the portal repo.            as /skill-name in every
-  Team gets them on git clone.             project on your machine.
+.claude/commands/                        ~/.claude/skills/
+  3 project-specific commands           Same 43 skills available
+  (ingest, db, eval).                      as /skill-name in every
+  .claude/agents/ has 6 agents.            project on your machine.
 ```
 
 **Quick start:**
@@ -33,7 +33,7 @@ PORTAL REPOSITORY                        PERSONAL DEVELOPMENT
 |------------|---------|
 | **SRF team member** | `claude plugin install github:rana/yogananda-skills` |
 | **Building an autonomous agent** | Copy agents from `agents/` into your project's `.claude/agents/` |
-| **Working on the portal** | Skills are already in the portal repo's `.claude/skills/` |
+| **Working on the portal** | Plugin provides skills; project has commands and agent overrides in `.claude/` |
 
 ## Install
 
@@ -119,13 +119,13 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 |---------|---------|
 | `explore` | Deep multi-dimensional perspective |
 | `explore-act` | Same, biased toward action |
+| `status` | Session orientation — milestone, recent commits, next deliverables |
 | `calibrate` | Set session thinking parameters |
 | `commit` | Draft, stage, commit, push |
-| `park` | Save work state for later |
-| `resume` | Restore parked context |
-| `morning` | Daily development briefing |
 | `compose` | Chain skills in sequence |
 | `arc-gate` | Phase-appropriate quality gate |
+| `dream` | Dreaming practice — encounter material without methodology |
+| `record` | Save cognitive output to session archive |
 | `self-test` | Validate the toolkit against itself |
 | `codex` | Contemplative practice — AI encounters its own cognitive map |
 
@@ -226,13 +226,12 @@ Skills produce the best output with the SRF portal's documentation architecture:
 
 | Document | What skills use it for |
 |----------|----------------------|
-| `CLAUDE.md` | Project rules, principles, identifier conventions |
-| `PRINCIPLES.md` | The 11 immutable commitments (PRI-01 through PRI-11) |
-| `CONTEXT.md` | Current state, open questions, methodology |
-| `DESIGN.md` | Architecture index; individual specs in `design/` |
-| `DECISIONS.md` | ADR index; bodies in DECISIONS-core/experience/operations.md |
-| `ROADMAP.md` | 3 arcs, milestones, M-notation deliverables |
-| `PROPOSALS.md` | PRO-NNN registry, graduation protocol |
+| `CLAUDE.md` | Project rules, principles, identifier conventions, code layout |
+| `PRINCIPLES.md` | The 12 immutable commitments (PRI-01 through PRI-12) |
+| `CONTEXT.md` | Current state, open questions, methodology, stakeholders |
+| `features/FEATURES.md` | Unified FTR index across 5 domains |
+| `features/{domain}/FTR-NNN-*.md` | Individual feature specs (165 files across foundation, search, experience, editorial, operations) |
+| `ROADMAP.md` | Current milestone first, deliverables (M-notation), success criteria |
 
 ## Development
 
