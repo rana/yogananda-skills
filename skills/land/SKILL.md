@@ -28,6 +28,8 @@ Organize remaining actions into three categories:
 3. **Human calls** — genuinely require user input (value judgments, scope
    decisions, external commitments)
 
+What am I attempting to achieve?
+
 ## Decide
 
 For clear calls: state the decision in one line and act.
