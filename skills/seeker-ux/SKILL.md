@@ -27,7 +27,7 @@ For every insight:
 1. The UX finding (friction, opportunity, or strength)
 2. Where it manifests
 3. The proposed improvement
-4. Which arc/milestone it belongs to
+4. Which arc/stage it belongs to
 
 Present as an action list. No changes to files — document only.
 

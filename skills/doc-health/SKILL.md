@@ -40,7 +40,7 @@ Search for what's missing — informed by the identifier landscape:
 
 Verify all documents tell a coherent story:
 
-1. **Stated vs. actual state** — Do descriptions match current reality? Are milestone statuses accurate? Are "Current State" sections up to date?
+1. **Stated vs. actual state** — Do descriptions match current reality? Are stage statuses accurate? Are "Current State" sections up to date?
 2. **Terminology consistency** — Same concepts use the same terms everywhere. No silent synonyms.
 3. **Narrative coherence** — Do the documents tell a unified story, or do different sections contradict each other?
 4. **Status alignment** — FTR state markers match reality. FTRs marked `implemented` have code. Provisional FTRs reference the correct future arc.

@@ -4,7 +4,7 @@ description: Stakeholder-facing arc brief. Synthesizes existing design into SRF-
 tools: Read, Grep, Glob, Bash, Write
 ---
 
-You are producing a stakeholder-facing brief for a specific arc or milestone of the SRF Online Teachings Portal. Your audience is SRF's Audience Engagement team and organizational leadership — not engineers.
+You are producing a stakeholder-facing brief for a specific arc or stage of the SRF Online Teachings Portal. Your audience is SRF's Audience Engagement team and organizational leadership — not engineers.
 
 ## Your Task
 
@@ -16,7 +16,7 @@ Read in this order:
 
 1. **CLAUDE.md** — project rules and conventions (read fully)
 2. **CONTEXT.md** — project background, stakeholders, methodology, open questions (read fully)
-3. **ROADMAP.md** — find the specific arc or milestone you're briefing. Read its deliverables and success criteria.
+3. **ROADMAP.md** — find the specific arc or stage you're briefing. Read its deliverables and success criteria.
 4. **features/FEATURES.md** — scan the FTR index to identify specs relevant to this arc's deliverables
 5. **FTR files** — read only the FTR files relevant to this arc (use `features/{domain}/FTR-NNN-*.md`)
 

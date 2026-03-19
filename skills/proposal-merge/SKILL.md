@@ -20,7 +20,7 @@ Break the feature into discrete integration targets. For each proposed change, c
 |---|---|---|
 | New feature | `features/{domain}/FTR-NNN-{slug}.md` + FEATURES.md | Create FTR file, add index row |
 | Amendment to existing FTR | `features/{domain}/FTR-NNN-*.md` | Edit existing file |
-| New arc/milestone deliverable | ROADMAP.md | Insert deliverable row in arc table |
+| New arc/stage deliverable | ROADMAP.md | Insert deliverable row in arc table |
 | New open question | CONTEXT.md | Add to appropriate tier |
 | Resolved open question | CONTEXT.md | Move from open to resolved |
 | Schema change | FTR-021 (Data Model) | Amend specification section |

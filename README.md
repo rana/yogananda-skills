@@ -119,7 +119,7 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 |---------|---------|
 | `explore` | Deep multi-dimensional perspective |
 | `explore-act` | Same, biased toward action |
-| `status` | Session orientation — milestone, recent commits, next deliverables |
+| `status` | Session orientation — stage, recent commits, next deliverables |
 | `calibrate` | Set session thinking parameters |
 | `commit` | Draft, stage, commit, push |
 | `compose` | Chain skills in sequence |
@@ -231,7 +231,7 @@ Skills produce the best output with the SRF portal's documentation architecture:
 | `CONTEXT.md` | Current state, open questions, methodology, stakeholders |
 | `features/FEATURES.md` | Unified FTR index across 5 domains |
 | `features/{domain}/FTR-NNN-*.md` | Individual feature specs (165 files across foundation, search, experience, editorial, operations) |
-| `ROADMAP.md` | Current milestone first, deliverables (M-notation), success criteria |
+| `ROADMAP.md` | Current stage first, deliverables (STG-notation), success criteria |
 
 ## Development
 

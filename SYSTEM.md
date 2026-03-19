@@ -412,7 +412,7 @@ Skills that "read all project markdown documents" expect a specific documentatio
 | `CONTEXT.md` | Purpose, constraints, stakeholders | Analysis happens in a vacuum |
 | `features/FEATURES.md` | Unified FTR index across domains | Architecture-dependent skills lose grounding |
 | `features/{domain}/FTR-NNN-*.md` | Individual feature specs and decisions | Can't reference prior decisions |
-| `ROADMAP.md` | Phases, milestones, status | Phase-aware skills can't map to timeline |
+| `ROADMAP.md` | Phases, stages, status | Phase-aware skills can't map to timeline |
 | `CLAUDE.md` | AI-specific project context | Skills miss project conventions |
 
 **Minimum viable:** CONTEXT.md + FEATURES.md. **Full environment:** All documents + codebase.

@@ -4,7 +4,7 @@ $ARGUMENTS
 
 ## Gate Selection
 
-Parse the argument to determine which gate to run. Accept: `pre-implementation`, `during-implementation`, `pre-launch`, `boundary`, or a milestone/arc number.
+Parse the argument to determine which gate to run. Accept: `pre-implementation`, `during-implementation`, `pre-launch`, `boundary`, or a stage/arc number.
 
 ### Gate: `pre-implementation` (default if no argument)
 
@@ -28,7 +28,7 @@ Run these skills in sequence, threading findings:
 
 ### Gate: `pre-launch`
 
-A milestone or arc is about to ship. Focus: is it production-ready?
+A stage or arc is about to ship. Focus: is it production-ready?
 
 Run these skills in sequence, threading findings:
 1. **`/launch-gate`** — Go/no-go across SLAs, monitoring, backups, rollback
@@ -38,7 +38,7 @@ Run these skills in sequence, threading findings:
 
 ### Gate: `boundary` or `boundary [N]`
 
-An arc or milestone boundary. Focus: is everything consistent and complete before moving on?
+An arc or stage boundary. Focus: is everything consistent and complete before moving on?
 
 Run these skills in sequence, threading findings:
 1. **`/deep-review`** — Comprehensive multi-dimensional quality gate
@@ -50,13 +50,13 @@ If a number is provided (e.g., `boundary 2`), focus all skills on Arc N's delive
 
 ## Inference
 
-If the argument is a milestone number (e.g., `1a`, `2b`, `3d`):
-- Pre-code milestone → `pre-implementation`
-- Active development milestone → `during-implementation`
-- Milestone with code ready to deploy → `pre-launch`
-- Milestone completing an arc → `boundary`
+If the argument is a stage number (e.g., `1a`, `2b`, `3d`):
+- Pre-code stage → `pre-implementation`
+- Active development stage → `during-implementation`
+- Stage with code ready to deploy → `pre-launch`
+- Stage completing an arc → `boundary`
 
-Infer from ROADMAP.md and CONTEXT.md § Current State which phase the milestone is in.
+Infer from ROADMAP.md and CONTEXT.md § Current State which phase the stage is in.
 
 ## Execution
 

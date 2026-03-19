@@ -13,7 +13,7 @@ Read these in parallel:
 Deliver a dense briefing. No narrative filler.
 
 ### Where We Are
-- Current milestone name and one-sentence goal
+- Current stage name and one-sentence goal
 - Deliverables: N/M complete (list remaining by number — e.g., STG-006-1, STG-006-4, STG-006-9)
 
 ### What Changed Recently
@@ -21,7 +21,7 @@ Deliver a dense briefing. No narrative filler.
 - Uncommitted changes (if any — file count and nature)
 
 ### What's Next
-- Next 1–2 unstarted deliverables from current milestone (number + name)
+- Next 1–2 unstarted deliverables from current stage (number + name)
 - Any Tier 2 open questions that could block near-term work
 
 ### Active Concerns

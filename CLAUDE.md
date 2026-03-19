@@ -46,7 +46,7 @@ Skills expect the SRF portal's documentation architecture:
 | `CONTEXT.md` | Current state, open questions, methodology, stakeholders |
 | `features/FEATURES.md` | Unified FTR index across 5 domains |
 | `features/{domain}/FTR-NNN-*.md` | Individual feature specs (165 files across foundation, search, experience, editorial, operations) |
-| `ROADMAP.md` | Current milestone first, deliverables (M-notation), success criteria |
+| `ROADMAP.md` | Current stage first, deliverables (STG-notation), success criteria |
 
 ## Finding Shape Convention
 
