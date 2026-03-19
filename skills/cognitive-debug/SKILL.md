@@ -1,7 +1,7 @@
 ---
 name: cognitive-debug
 description: Reasoning trace and correction. When thinking went wrong — yours or Claude's — trace back to find where pattern-matching replaced mechanism-tracing, where fear replaced exploration, or where compression happened prematurely. The cognitive equivalent of setting breakpoints in a thought process.
-argument-hint: "[reasoning, decision, or conclusion to debug] [--dialogue]"
+argument-hint: "[reasoning, decision, or conclusion to debug]"
 ---
 
 Examine the conversation history and any relevant project context.
@@ -9,10 +9,6 @@ Examine the conversation history and any relevant project context.
 ## Cognitive Debugging
 
 Target: $ARGUMENTS
-
-### Dialogue Mode
-
-If `--dialogue` is specified, present the traced reasoning chain and identified breakpoints (Steps 1-3), then pause. Ask the user to confirm or correct the trace before generating corrective questions and the corrected path. The user often knows *where* thinking went wrong better than the tool does — their correction makes Steps 4-5 sharper. Without `--dialogue`, run all steps and deliver the complete analysis.
 
 ### Step 1: State the Conclusion
 What was concluded, decided, or produced? State it precisely — the output of the reasoning, not the intent.

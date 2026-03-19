@@ -120,7 +120,6 @@ builder "implement the search endpoint"
 - **Threading vs. independent.** Compose threads context — `/compose steelman, inversion` gives steelman-informed inversion. Running them separately gives two independent views. Choose based on whether you want cross-pollination or fresh perspectives.
 - **Vary closing registers.** When consecutive skills share the same coda register, the repeated activation loses force. The third Meta-cognitive coda in a row feels rote. Design chains where closing registers differ: gaps (Meta-cognitive) → crystallize (Compression) → invoke (Authority).
 - **Momentum bleeds across boundaries.** The last skill's trajectory persists into the next skill's frame. `archaeology → invoke` works partly because archaeology's Receptive leaves openness for invoke's Sacred. `invoke → gaps` would fight — upward momentum resists systematic grounding. Match chain order to momentum direction.
-- **Dialogue is incompatible with compose.** Compose needs autonomous passes. Use `--dialogue` for standalone deep dives where your mid-stream input changes quality of output.
 - **Not everything composes.** `/context-switch`, `/scratch`, `/calibrate` are navigation or routing tools — they don't produce findings to thread forward.
 
 ### Decisions & Strategy
@@ -373,18 +372,6 @@ Default 4 lenses (integration, transcendence, context-dependence, meta-perspecti
 | Stress-testing a choice | Meta-Perspective + Negation + Dissolution |
 | Recurring tension worth thorough exploration | All 11 |
 
-### Dialogue Mode
-
-Three cognitive skills support `--dialogue` for collaborative inquiry instead of one-shot delivery:
-
-| Skill | Pauses at | You steer |
-|-------|-----------|-----------|
-| `/archaeology` | Every 2-3 layers | Which layers to explore deeper, what resonates |
-| `/triad` | After first 2 lenses | Whether to reframe the polarity, which lenses to add |
-| `/cognitive-debug` | After trace + breakpoints | Confirm or correct the trace before corrective path |
-
-**Use dialogue** when the subject is personal or ambiguous — you hold context that isn't in the documents, and your input mid-stream changes quality of output. **Use one-shot** when the subject is well-documented and Claude can reason autonomously. Dialogue mode is not compatible with `/compose`.
-
 ### Crucible — Trajectory Through Zero
 
 The only skill whose cascade deliberately reverses direction. Four movements:
@@ -517,7 +504,7 @@ You trust a skill as much as you trust its author with shell access to your mach
 - **Architecture-derived** — security and readiness skills reason from the specific stack, not generic checklists.
 - **Every word in a skill prompt shapes the cognitive field** — skill definitions are precision instruments. Do not paraphrase.
 - **Two tiers of value** — cognitive-shaping skills (archaeology, invoke, crucible, triad, reframe, crystallize) produce thinking patterns the base model doesn't reach alone. Analytical skills (gaps, threat-model, scope) provide consistency and composability. Prompt craft has highest leverage on cognitive skills.
-- **One-shot by default, dialogue on request** — cognitive skills support `--dialogue` for collaborative inquiry.
+- **One-shot by default** — skills deliver complete analysis autonomously.
 
 ## Practice Layer
 

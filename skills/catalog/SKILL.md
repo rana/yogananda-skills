@@ -25,7 +25,7 @@ Build a structured inventory of the toolkit. For each skill, extract:
 5. **Stage mapping** — which project stages (exploring, designing, pre-implementation, implementing, post-implementation, pre-launch, maintaining) is it primary for?
 6. **Input requirements** — what does it need? (project docs, codebase, prior findings, specific arguments)
 7. **Output shape** — finding list, narrative, directive, action report, structured data
-8. **Dialogue support** — supports `--dialogue` mode? yes/no
+8. **Flags** — supported flags (e.g., `--layers`, `--relational`, `--lenses`, `--all-lenses`)
 
 ### Per-Command Properties
 

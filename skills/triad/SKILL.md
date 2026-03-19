@@ -1,7 +1,7 @@
 ---
 name: triad
 description: Dimensional tension analysis. Given a polarity (X and Y), explore it through synthesis lenses that create genuine intellectual tension in three directions — not flat compromise but multi-directional insight. Use for design decisions, architectural tensions, strategic choices, or any polarity worth understanding deeply.
-argument-hint: "X vs Y [--lenses integration,emergence,negation] [--all-lenses] [--dialogue]"
+argument-hint: "X vs Y [--lenses integration,emergence,negation] [--all-lenses]"
 ---
 
 Read all project markdown documents to ground in the project's actual state.
@@ -13,10 +13,6 @@ Target polarity: $ARGUMENTS
 Parse the polarity from the argument. Accept formats: "X vs Y", "X and Y", "X or Y", "X ←→ Y", or free-form text describing a tension.
 
 If `--lenses` is specified, use only those lenses. If `--all-lenses` is specified, use all 11. Otherwise, use the default four.
-
-### Dialogue Mode
-
-If `--dialogue` is specified, present the first 2 lenses, then pause. Ask which lenses revealed something worth pursuing deeper, and whether the polarity itself should be reframed before continuing. The user's response steers which remaining lenses run and how. Without `--dialogue`, run all active lenses and deliver the complete analysis.
 
 ### Default Lenses
 

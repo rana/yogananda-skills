@@ -1,7 +1,7 @@
 ---
 name: archaeology
 description: Cognitive archaeology — layered questioning that builds from surface inquiry through assumptions, perspectives, tensions, and meta-cognition to surface what conventional analysis misses. The sequence builds cognitive momentum; each layer prepares the ground for the next. Use for deep exploration of any subject, decision, or design.
-argument-hint: "[subject to excavate] [--layers F2,F9,F11] [--relational] [--dialogue]"
+argument-hint: "[subject to excavate] [--layers F2,F9,F11] [--relational]"
 ---
 
 Read all project markdown documents to ground in the project's actual state.
@@ -13,10 +13,6 @@ Target: $ARGUMENTS
 Work through these layers sequentially. Each layer prepares the ground for the next — the sequence builds cognitive momentum rather than jumping between modes. Skip layers only if they produce nothing for this subject.
 
 If `--layers` is specified, run only those layers. If `--relational` is included, append the Relational Layer after the Foundation.
-
-### Dialogue Mode
-
-If `--dialogue` is specified, pause after every 2-3 layers and present findings so far. Ask what resonates, what surprises, and what to explore deeper before continuing. Let the user's responses steer which subsequent layers receive more attention. This turns the excavation into collaborative inquiry rather than delivered analysis. Without `--dialogue`, run all layers and deliver the complete excavation.
 
 ### F1: Opening Inquiry
 - What questions would I benefit from asking about this subject?
