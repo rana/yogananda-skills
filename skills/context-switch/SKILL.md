@@ -38,4 +38,6 @@ Present as a compact briefing:
 {What this area talks to}
 ```
 
-Optimize for speed of comprehension. This is a 60-second orientation, not a deep analysis.
+## Output
+
+Optimize for speed of comprehension. This is a 60-second orientation, not a deep analysis. Use the briefing template above — no finding shape, no severity ratings. Compact, scannable, immediate.

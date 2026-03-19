@@ -1,6 +1,6 @@
 # SRF Cognitive Toolkit
 
-Cognitive infrastructure for the SRF Online Teachings Portal — 43 skills (37 analytical + 6 SRF mission), 11 commands, 2 practices, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
+Cognitive infrastructure for the SRF Online Teachings Portal — 43 skills (37 analytical + 6 SRF mission), 9 commands, 2 practices, and 8 agents (4 domain-agnostic + 4 SRF-specialized). Shared across the SRF team and autonomous agents working on the portal.
 
 36 analytical skills are domain-agnostic (they analyze whatever project they're pointed at). 6 SRF mission skills are portal-specific (proposal management, mission alignment, seeker experience). 1 skill (ftr-curate) bridges both — domain-agnostic methodology with FTR-specific structural awareness. 4 domain-agnostic agents (architect, designer, builder, operator) work in any codebase. 4 SRF-specialized agents embed skill methodology with project-specific reading strategies, identifier conventions, and domain vocabulary.
 
@@ -92,7 +92,7 @@ srf/
 ├── README.md                    # Team usage guide
 ├── agents/                      # 8 agents (4 domain-agnostic + 4 SRF-specialized)
 ├── skills/                      # 43 skills (37 analytical + 6 SRF mission)
-├── commands/                    # 10 workflow commands + 2 practices
+├── commands/                    # 9 workflow commands + 2 practices
 ├── codex/sessions/              # Codex practice responses (accumulated corpus)
 ├── dream/sessions/              # Dream practice responses
 └── scripts/

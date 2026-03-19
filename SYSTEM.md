@@ -1,6 +1,6 @@
 # System
 
-A cognitive toolkit for Claude Code. 43 skills, 10 commands, 2 practices, 8 agents (4 domain-agnostic + 4 SRF-specialized). Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
+A cognitive toolkit for Claude Code. 43 skills, 9 commands, 2 practices, 8 agents (4 domain-agnostic + 4 SRF-specialized). Skill definitions are read by AI — specific language in each prompt produces measurably different analytical behavior. This isn't configuration. It's cognitive infrastructure.
 
 ## Commands
 
@@ -15,6 +15,8 @@ A cognitive toolkit for Claude Code. 43 skills, 10 commands, 2 practices, 8 agen
 | `/integrity` | Verify toolkit consistency and memory accuracy — structure, cross-references, composition, memory claims |
 | `/codex` | Contemplative practice — AI encounters its own cognitive map. Three modes: practice (default), harvest, compose |
 | `/dream` | Dreaming practice — encounter any material without methodology or destination. Context-isolated subagent |
+| `/record` | Save cognitive output to the project's session archive with thread distillation |
+| `/status` | Session orientation — quick briefing on project state, recent changes, next actions |
 
 ## Selection
 
@@ -419,11 +421,11 @@ Skills that "read all project markdown documents" expect a specific documentatio
 
 | Stage | Primary skills |
 |-------|---------------|
-| Exploring / deciding | archaeology, triad, reframe, consequences, invoke, crucible, converge, propose |
-| Designing | scope, gaps, deep-review, api-review, seeker-ux |
-| Pre-implementation | steelman, inversion, threat-model, implement, mission-align |
-| Implementing | context-switch, tomorrow, ghost, land |
-| Post-implementation | verify, drift-detect, doc-health, proposal-merge |
+| Exploring / deciding | archaeology, triad, reframe, consequences, invoke, crucible, converge, propose, cognitive-debug |
+| Designing | scope, gaps, deep-review, api-review, seeker-ux, docs-quality, workflow-trace |
+| Pre-implementation | steelman, inversion, threat-model, implement, mission-align, review |
+| Implementing | context-switch, tomorrow, ghost, land, why-chain |
+| Post-implementation | verify, drift-detect, doc-health, proposal-merge, crystallize |
 | Pre-launch | launch-gate, hardening-audit, ops-review, incident-ready, cultural-lens |
 | Maintaining | drift-detect, supply-chain-audit, doc-health, catalog, ftr-curate, ftr-stale, spec-survey |
 | Content integration | theme-integrate, seeker-ux, cultural-lens, mission-align |
