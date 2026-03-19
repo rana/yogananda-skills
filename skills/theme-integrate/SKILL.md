@@ -124,7 +124,7 @@ On approval, write changes to the appropriate FTR files:
 5. **FTR-034** — Amend knowledge graph edges
 6. **FTR-056** — Amend worldview pathways
 7. **FTR-065** — Amend calendar associations (if applicable)
-8. **ROADMAP.md** — Add theme to the appropriate arc/milestone deliverables (usually Milestone 2a for taxonomy, Milestone 3b for graph edges)
+8. **ROADMAP.md** — Add theme to the appropriate stage deliverables (usually STG-004 for taxonomy, STG-007 for graph edges)
 9. **CONTEXT.md** — Add any unresolved editorial/stakeholder questions as open questions
 
 Add revision notes to each amended section: `*Theme added: [theme-name], [date]*`

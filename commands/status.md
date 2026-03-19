@@ -14,7 +14,7 @@ Deliver a dense briefing. No narrative filler.
 
 ### Where We Are
 - Current milestone name and one-sentence goal
-- Deliverables: N/M complete (list remaining by number — e.g., M3a-1, M3a-4, M3a-9)
+- Deliverables: N/M complete (list remaining by number — e.g., STG-006-1, STG-006-4, STG-006-9)
 
 ### What Changed Recently
 - Last 3–5 commits (one line each, emphasize what shipped)

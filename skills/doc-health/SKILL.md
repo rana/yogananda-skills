@@ -14,7 +14,7 @@ A single-pass audit across three dimensions, reading documents once and threadin
 
 ### Phase 1: Identifier Audit
 
-Audit the identifier systems (PRI-NN, FTR-NNN) for lifecycle health:
+Audit the identifier systems (PRI-NN, FTR-NNN, STG-NNN) for lifecycle health:
 
 1. **Inventory** — Count FTRs per domain and state. Note gaps in numbering, find the highest allocated number per domain.
 2. **Safe deletion candidates** — FTRs that are: superseded by later decisions, absorbed into other FTRs, orphaned (no cross-references point to them), vestigial (govern features that were cut), or reconstructible from code and domain knowledge alone.
@@ -31,7 +31,7 @@ Search for what's missing — informed by the identifier landscape:
 2. **Unaddressed scenarios** — Edge cases, failure modes, error paths that aren't specified. What happens when things go wrong?
 3. **Dependency gaps** — Unarticulated service contracts, implicit ordering, assumed infrastructure.
 4. **Persona blind spots** — Underserved user roles or personas. Workflows not traced.
-5. **Phase transition gaps** — Prerequisites for the next milestone that aren't documented. Hand-off points between arcs.
+5. **Phase transition gaps** — Prerequisites for the next stage that aren't documented. Hand-off points between arcs.
 6. **Spatial gaps** — What's conspicuously absent? What should exist by analogy to what does exist?
 
 *Thread forward: Gaps found in Phase 2 inform what Phase 3 checks for — a gap may indicate an inconsistency rather than a true omission.*
