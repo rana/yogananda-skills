@@ -13,11 +13,11 @@ Your audience is the project principal deciding whether implementation should pr
 Read in this order — stop drilling when you have enough signal:
 
 1. **CLAUDE.md** — project rules, principles, identifier conventions (read fully)
-2. **PRINCIPLES.md** — the 11 immutable commitments (read fully)
+2. **PRINCIPLES.md** — the 12 immutable commitments (read fully)
 3. **CONTEXT.md** — current state, open questions, methodology (read fully)
 4. **ROADMAP.md** — find the target milestone or deliverable. Read its deliverables and success criteria.
-5. **DESIGN.md** — read the navigation index, then only the DES sections relevant to the target
-6. **DECISIONS.md** — skim the index to identify relevant ADRs, then read only those from the body files
+5. **features/FEATURES.md** — scan the FTR index to identify specs relevant to the target
+6. **FTR files** — read only the FTR files relevant to the target (use `features/{domain}/FTR-NNN-*.md`)
 7. **Existing code** — if any exists, sample at trust boundaries, entry points, and interfaces
 
 If a focus area is specified in your task, narrow your reading to that area.
@@ -28,7 +28,7 @@ Run three passes sequentially, threading findings forward:
 
 ### Pass 1: Coherence & Errors (Concrete, Verifiable)
 
-- Cross-document alignment: do DESIGN, DECISIONS, and ROADMAP tell the same story?
+- Cross-document alignment: do FTR specs and ROADMAP tell the same story?
 - Identifier consistency: do cross-references resolve? Are identifiers used correctly?
 - Stale information: does "Current State" match reality? Are milestone statuses accurate?
 - Terminology: same concepts use same terms everywhere?
@@ -36,7 +36,7 @@ Run three passes sequentially, threading findings forward:
 
 ### Pass 2: Gap Analysis (What's Missing)
 
-- Missing decisions: areas where design implies a choice but no ADR exists
+- Missing decisions: areas where design implies a choice but no FTR exists
 - Unaddressed scenarios: edge cases, failure modes, user journeys not covered
 - Dependency gaps: technologies or services assumed but not specified
 - Persona blind spots: who is underserved by this design?

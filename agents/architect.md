@@ -57,7 +57,7 @@ Evaluate each option against:
 
 ### Phase 4: Recommendation
 
-Produce an ADR-shaped recommendation:
+Produce a decision-record-shaped recommendation:
 
 - **Decision** — what to do, stated clearly
 - **Context** — the forces that shaped this decision

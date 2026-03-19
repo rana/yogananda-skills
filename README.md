@@ -6,7 +6,7 @@ Cognitive infrastructure for the Yogananda digital ecosystem (SRF, YSS, platform
 
 Skills are prompt templates that shape how Claude thinks. Each skill examines from a different angle — threat modeling reasons from the actual architecture (Neon, Vercel, Sentry, AWS), not a generic checklist; gap analysis searches spatial dimensions, not just obvious omissions; archaeology excavates through layered questioning.
 
-Agents are SRF-specialized configurations that embed skill methodology with project-specific reading strategies (PRINCIPLES.md, DECISIONS body files, DES sections), identifier conventions (PRI-NN, ADR-NNN, DES-NNN, PRO-NNN), and domain vocabulary ("seekers" not "users", "teachings" not "content").
+Agents are SRF-specialized configurations that embed skill methodology with project-specific reading strategies (PRINCIPLES.md, FEATURES.md, FTR files), identifier conventions (PRI-NN, FTR-NNN), and domain vocabulary ("seekers" not "users", "teachings" not "content").
 
 ## Here's the Relationship
 
@@ -99,7 +99,7 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `workflow-trace` | End-to-end workflow tracing for friction points |
 | `propose` | Write a proposal for any subject — rigorous, executable, complete |
 | `land` | Transition from analysis to action — harvest findings, decide, execute |
-| `spec-survey` | Specification corpus analysis (FTRs, RFCs, ADRs) — overlap, orphans, hubs |
+| `spec-survey` | Specification corpus analysis (FTRs, RFCs, or similar) — overlap, orphans, hubs |
 
 ### SRF Mission
 
@@ -110,7 +110,7 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `cultural-lens` | Cultural, spiritual, or demographic perspective audit |
 | `ftr-curate` | Compare, merge, split, archive FTRs; triage explorations into curated FTR entries |
 | `ftr-stale` | Corpus freshness audit — state accuracy, content drift, relevance decay |
-| `proposal-merge` | Graduate PRO-NNN into ADR/DES edits across all project documents |
+| `proposal-merge` | Graduate proposed FTR into approved state, updating FEATURES.md and ROADMAP.md |
 | `theme-integrate` | Integrate new content themes into taxonomy, graph, and enrichment pipeline |
 
 ## Commands (11)
@@ -126,7 +126,7 @@ After installation: `/y:deep-review`, `/y:gaps`, etc.
 | `arc-gate` | Phase-appropriate quality gate |
 | `dream` | Dreaming practice — encounter material without methodology |
 | `record` | Save cognitive output to session archive |
-| `self-test` | Validate the toolkit against itself |
+| `integrity` | Verify toolkit consistency and memory accuracy |
 | `codex` | Contemplative practice — AI encounters its own cognitive map |
 
 ## Codex Practice
@@ -161,13 +161,13 @@ See CODEX.md for the theory (register taxonomy, position grammar, generative pri
 | Agent | Embedded Skills | Purpose |
 |-------|----------------|---------|
 | `pre-impl-reviewer` | deep-review + gaps + threat-model | Quality gate before coding — go/no-go verdict |
-| `doc-maintainer` | doc-health + drift-detect | Document integrity — PRI/ADR/DES/PRO audit, consistency, omissions |
+| `doc-maintainer` | doc-health + drift-detect | Document integrity — PRI/FTR audit, consistency, omissions |
 | `launch-readiness` | launch-gate + ops-review + incident-ready | Production readiness — 9-dimension go/no-go (Neon, Vercel, Sentry, AWS) |
 | `stakeholder-brief` | *(unique — no skill equivalent)* | Translate architecture into SRF stakeholder communication. Writes PROPOSAL.md with seeker stories, decision points, principle mapping. 1500 words, zero jargon. |
 
 **What makes these SRF-specific:**
-- Reading strategies reference PRINCIPLES.md, DECISIONS body files, FTR-096, PROPOSALS.md
-- Identifier awareness: PRI-NN, ADR-NNN, DES-NNN, PRO-NNN systems
+- Reading strategies reference PRINCIPLES.md, FEATURES.md, and individual FTR files
+- Identifier awareness: PRI-NN and FTR-NNN systems
 - Stack grounding: Neon, Vercel, Sentry, AWS, DELTA compliance, axe-core
 - Vocabulary: "seekers" not "users", "teachings" not "content", "the portal" not "the application"
 

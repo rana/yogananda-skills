@@ -12,7 +12,7 @@ Target: $ARGUMENTS
 
 ### Phase 1: Locate Specification and Code
 
-1. **Find the spec** — If the argument is a DES/ADR identifier, read that section. If it's a deliverable number, find the ROADMAP.md deliverable and follow all ADR/DES references. If it's a file path, infer the governing spec from the file's purpose and location.
+1. **Find the spec** — If the argument is an FTR identifier, read that file. If it's a deliverable number, find the ROADMAP.md deliverable and follow all FTR references. If it's a file path, infer the governing spec from the file's purpose and location.
 2. **Find the code** — Locate all implementation files. Use the project's code layout conventions to find services, API routes, migrations, config, and tests.
 
 ### Phase 2: Specification Compliance
@@ -68,7 +68,7 @@ For each requirement in the specification:
 |-------------|-------------|---------------|------|
 
 ### Recommended Document Updates
-[Specific edits to DES/ADR status fields, spec corrections, new open questions]
+[Specific edits to FTR state fields, spec corrections, new open questions]
 
 ### Issues Found
 [Prioritized list of discrepancies]

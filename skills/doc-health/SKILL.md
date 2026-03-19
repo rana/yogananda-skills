@@ -14,12 +14,12 @@ A single-pass audit across three dimensions, reading documents once and threadin
 
 ### Phase 1: Identifier Audit
 
-Audit the identifier systems (ADR-NNN, DES-NNN, PRO-NNN) for lifecycle health:
+Audit the identifier systems (PRI-NN, FTR-NNN) for lifecycle health:
 
-1. **Inventory** — Count identifiers per prefix, note gaps in numbering, find the highest allocated number per prefix.
-2. **Safe deletion candidates** — Identifiers that are: superseded by later decisions, reversed by subsequent ADRs, absorbed into other identifiers, orphaned (no cross-references point to them), vestigial (govern features that were cut), or reconstructible from code and domain knowledge alone.
-3. **Merge candidates** — Identifiers with overlapping territory that could be consolidated without losing information.
-4. **Cross-reference integrity** — Every identifier reference exists in its canonical home. Bidirectional: if A references B, does B make sense in that context? Dangling references. Missing back-references.
+1. **Inventory** — Count FTRs per domain and state. Note gaps in numbering, find the highest allocated number per domain.
+2. **Safe deletion candidates** — FTRs that are: superseded by later decisions, absorbed into other FTRs, orphaned (no cross-references point to them), vestigial (govern features that were cut), or reconstructible from code and domain knowledge alone.
+3. **Merge candidates** — FTRs with overlapping territory that could be consolidated without losing information.
+4. **Cross-reference integrity** — Every FTR and PRI reference resolves to an actual file or entry. Bidirectional: if A references B, does B make sense in that context? Dangling references. Missing back-references.
 
 *Thread forward: Findings from Phase 1 (especially orphaned identifiers and broken references) inform what Phase 2 looks for.*
 
@@ -27,7 +27,7 @@ Audit the identifier systems (ADR-NNN, DES-NNN, PRO-NNN) for lifecycle health:
 
 Search for what's missing — informed by the identifier landscape:
 
-1. **Missing decisions** — Explicit assumptions that should be ADRs. Implicit contracts between components. Design choices embedded in code that lack documentation.
+1. **Missing decisions** — Explicit assumptions that should be FTRs. Implicit contracts between components. Design choices embedded in code that lack documentation.
 2. **Unaddressed scenarios** — Edge cases, failure modes, error paths that aren't specified. What happens when things go wrong?
 3. **Dependency gaps** — Unarticulated service contracts, implicit ordering, assumed infrastructure.
 4. **Persona blind spots** — Underserved user roles or personas. Workflows not traced.
@@ -43,7 +43,7 @@ Verify all documents tell a coherent story:
 1. **Stated vs. actual state** — Do descriptions match current reality? Are milestone statuses accurate? Are "Current State" sections up to date?
 2. **Terminology consistency** — Same concepts use the same terms everywhere. No silent synonyms.
 3. **Narrative coherence** — Do the documents tell a unified story, or do different sections contradict each other?
-4. **Status alignment** — ADR maturity markers match reality. DES sections marked as implemented have code. Provisional ADRs reference the correct future arc.
+4. **Status alignment** — FTR state markers match reality. FTRs marked `implemented` have code. Provisional FTRs reference the correct future arc.
 5. **Table alignment** — Roadmap deliverables match DESIGN sections. Credential tables match tech stack tables. Sub-processor tables match vendor lists.
 
 ### Synthesis

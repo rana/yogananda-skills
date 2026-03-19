@@ -20,7 +20,7 @@ Evolved from dedup-proposals. Subsumes its exploration-consolidation role and ex
 
 **Merge** (`/ftr-curate merge FTR-035 → FTR-034`): Absorb one FTR into another.
 
-**Split** (`/ftr-curate split FTR-040 DES-007..DES-016`): Extract subsections into a new standalone FTR.
+**Split** (`/ftr-curate split FTR-040 "Section Name"`): Extract subsections into a new standalone FTR.
 
 **Archive** (`/ftr-curate archive FTR-142 FTR-143`): Batch state transition to Archived.
 
@@ -112,7 +112,7 @@ Present the alignment table and resolution proposal. User approves before any wr
 5. Update `features/FEATURES.md` index: mark FTR-MMM as Absorbed, note redirect
 6. Update `features/MIGRATION.md` if it exists: add merge mapping
 7. If FTR-MMM appears in the "Always-Load FTRs" table, transfer that designation to FTR-NNN
-8. If FTR-MMM has DES-NNN subsections listed in FEATURES.md, reassign them to FTR-NNN
+8. If FTR-MMM has subsections referenced in FEATURES.md, reassign them to FTR-NNN
 
 **Step 3: Report.** Summarize: what transferred, what was dropped, how many cross-references rewritten, files modified.
 
@@ -120,7 +120,7 @@ Present the alignment table and resolution proposal. User approves before any wr
 
 ### Split Mode
 
-**Syntax:** `/ftr-curate split FTR-NNN DES-007..DES-016` or `/ftr-curate split FTR-NNN "Section Name"`
+**Syntax:** `/ftr-curate split FTR-NNN "Section Name"` or `/ftr-curate split FTR-NNN "### Heading A" .. "### Heading Z"`
 
 **Step 1: Preview.** Read FTR-NNN fully. Show:
 - Content being extracted
@@ -134,7 +134,7 @@ Present the alignment table and resolution proposal. User approves before any wr
 2. Move extracted content, adding back-reference to parent
 3. Update parent FTR to reference the new FTR where content was removed
 4. Update `features/FEATURES.md`: add new entry, update parent entry if needed
-5. Update "Subsection Identifiers" table in FEATURES.md if DES-NNN subsections were promoted
+5. Update FEATURES.md index if subsections were promoted to standalone FTRs
 6. Update `features/MIGRATION.md` if it exists
 
 **Step 3: Report.** Summarize: new FTR created, parent updated, cross-references adjusted.
@@ -149,7 +149,7 @@ Present the alignment table and resolution proposal. User approves before any wr
 - Current state
 - Inbound references (which other FTRs cite this one)
 - Whether it appears in "Always-Load FTRs" (warn — requires confirmation)
-- Whether it has DES-NNN subsections
+- Whether it has subsections that could be standalone FTRs
 
 **Step 2: Execute (on approval).**
 1. Update each FTR's state to `Archived`

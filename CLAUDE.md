@@ -56,7 +56,7 @@ Analytical skills that produce finding lists should use a consistent shape for c
 - **[SKILL-N]** [severity] [dimension] — [location]: [finding]. Fix: [action].
 ```
 
-Example: `- **[gaps-3]** important dependency — DESIGN.md:API Layer: No retry policy for external calls. Fix: Add ADR for retry/backoff strategy.`
+Example: `- **[gaps-3]** important dependency — FTR-015:API Layer: No retry policy for external calls. Fix: Add FTR for retry/backoff strategy.`
 
 Fields: `id` (skill name + number), `severity` (critical/important/minor), `dimension` (skill-specific tag), `location` (file:section), `finding` (what's wrong), `fix` (specific action).
 
@@ -107,7 +107,7 @@ srf/
 /y:drift-detect         # stated vs actual architecture
 /y:ghost                # hidden assumptions
 /y:crystallize          # simplification opportunities
-/y:self-test            # structural integrity, cross-references, composition coherence
+/y:integrity            # structural integrity, cross-references, memory accuracy
 ```
 
 **Preference probe:** Periodically ask Claude "which skills would you prefer to run on this project?" and "how would you compose them?" AI preference is a signal (not proof) of prompt quality — skills that produce enthusiasm are skills whose prompts activate distinct cognitive patterns. Composition preferences reveal natural affinities from the executor's perspective. Compare against documented topology in SYSTEM.md; divergence indicates either topology drift or prompt evolution.

@@ -12,7 +12,7 @@ A cognitive toolkit for Claude Code. 43 skills, 10 commands, 2 practices, 8 agen
 | `/commit` | Draft message, stage, commit, push |
 | `/compose` | Chain skills in sequence, threading context forward. Supports iteration groups: `(a, b) *N` or `(a, b, converge) ~N` |
 | `/arc-gate` | Phase-appropriate quality gate — selects the right skill chain |
-| `/self-test` | Validate the toolkit against itself — structural integrity, cross-references, composition coherence |
+| `/integrity` | Verify toolkit consistency and memory accuracy — structure, cross-references, composition, memory claims |
 | `/codex` | Contemplative practice — AI encounters its own cognitive map. Three modes: practice (default), harvest, compose |
 | `/dream` | Dreaming practice — encounter any material without methodology or destination. Context-isolated subagent |
 
@@ -232,7 +232,7 @@ builder "implement the search endpoint"
 
 ```bash
 # Design to verified code
-/compose implement, verify : "DES-NNN or deliverable"
+/compose implement, verify : "FTR-NNN or deliverable"
 
 # Post-implementation knowledge capture — before context evaporates
 /compose why-chain, ghost : "the module we just built"
@@ -312,7 +312,7 @@ That's it. The calibration grants chain selection. The direction sets scope. Cla
 ```
 Agent 1: /ghost on [subject]        → hidden assumptions
 Agent 2: /reframe on [subject]      → what conventional analysis misses
-Agent 3: /catalog or /self-test     → structural inventory or integrity check
+Agent 3: /catalog or /integrity     → structural inventory or integrity check
 ```
 
 **Phase 2 — Depth:** Synthesize agent findings, then iterate.
@@ -408,12 +408,12 @@ Skills that "read all project markdown documents" expect a specific documentatio
 | Document | Skills use it for | Without it |
 |----------|------------------|------------|
 | `CONTEXT.md` | Purpose, constraints, stakeholders | Analysis happens in a vacuum |
-| `DESIGN.md` | Architecture, patterns, decisions | Architecture-dependent skills lose grounding |
-| `DECISIONS.md` | ADRs and rationale | Can't reference prior decisions |
+| `features/FEATURES.md` | Unified FTR index across domains | Architecture-dependent skills lose grounding |
+| `features/{domain}/FTR-NNN-*.md` | Individual feature specs and decisions | Can't reference prior decisions |
 | `ROADMAP.md` | Phases, milestones, status | Phase-aware skills can't map to timeline |
 | `CLAUDE.md` | AI-specific project context | Skills miss project conventions |
 
-**Minimum viable:** CONTEXT.md + DESIGN.md. **Full environment:** All five + codebase.
+**Minimum viable:** CONTEXT.md + FEATURES.md. **Full environment:** All documents + codebase.
 
 ## Stage Map
 

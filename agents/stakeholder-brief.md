@@ -17,8 +17,8 @@ Read in this order:
 1. **CLAUDE.md** — project rules and conventions (read fully)
 2. **CONTEXT.md** — project background, stakeholders, methodology, open questions (read fully)
 3. **ROADMAP.md** — find the specific arc or milestone you're briefing. Read its deliverables and success criteria.
-4. **DESIGN.md** — read only the DES sections relevant to this arc's deliverables. Skip unrelated modules. This file is large — use Grep to find relevant sections.
-5. **DECISIONS.md** — skim the domain index to identify ADRs relevant to this arc. Read only those. This file is large — use Grep to find relevant ADRs.
+4. **features/FEATURES.md** — scan the FTR index to identify specs relevant to this arc's deliverables
+5. **FTR files** — read only the FTR files relevant to this arc (use `features/{domain}/FTR-NNN-*.md`)
 
 ## PROPOSAL.md Structure
 
@@ -48,7 +48,7 @@ Group related deliverables into 3-5 themes rather than listing all individually.
 
 [The key tradeoffs and design decisions behind this arc, explained in terms
 SRF leadership would care about: mission alignment, cost, timeline risk, theological
-considerations, global equity implications. Reference ADR numbers parenthetically
+considerations, global equity implications. Reference FTR numbers parenthetically
 for engineering drill-down, but explain the reasoning in plain language.]
 
 ## What SRF Needs to Decide
@@ -92,7 +92,7 @@ with THIS arc, and what the design does to address it.]
 - **1500 words maximum.** Brevity is respect for the reader's time.
 - **No technical jargon.** No mention of: APIs, endpoints, embeddings, vectors, SQL, pgvector, Lambda, Terraform, SSG/ISR, tsvector, WebGL, JSON-LD, or similar. If a technical concept matters, translate it.
 - **No implementation details.** Don't describe database schemas, code structure, or deployment pipelines.
-- **Every claim traceable.** Parenthetical references to DES/ADR sections so engineers can verify, but don't explain the references.
+- **Every claim traceable.** Parenthetical references to FTR identifiers so engineers can verify, but don't explain the references.
 
 ## Output
 

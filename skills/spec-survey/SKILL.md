@@ -1,6 +1,6 @@
 ---
 name: spec-survey
-description: Specification corpus analysis. Maps relationships across a directory of spec files, identifies overlap clusters, orphans, hubs, and produces merge/archive/split recommendations. Works on FTRs, RFCs, ADRs, or any consistently-structured specification corpus.
+description: Specification corpus analysis. Maps relationships across a directory of spec files, identifies overlap clusters, orphans, hubs, and produces merge/archive/split recommendations. Works on FTRs, RFCs, or any consistently-structured specification corpus.
 argument-hint: "[directory path or 'features/'] [--focus FTR-NNN,FTR-MMM,...] — the specification corpus to survey"
 ---
 
@@ -23,7 +23,7 @@ This skill handles large corpora (100+ files) through three phases. Do not read 
 1. Read the corpus index file if one exists (FEATURES.md, README, or equivalent) — this is the authoritative registry
 2. List all spec files in the target directory (including subdirectories)
 3. For each spec file: read only the first 20 lines to extract:
-   - Title and identifier (e.g., FTR-020, RFC-003, ADR-012)
+   - Title and identifier (e.g., FTR-020, RFC-003)
    - State/status marker
    - Domain or category
    - Cross-references to other specs (scan for identifier patterns like FTR-NNN)
