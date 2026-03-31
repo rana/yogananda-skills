@@ -1,6 +1,6 @@
 ---
 name: strategy-audit
-description: Validate a strategy against return conditions, decoherence thresholds, and tourism immunization. Use when evaluating a candidate strategy or reviewing an existing one.
+description: Validate a strategy against profit thresholds, return conditions, decoherence, and tourism immunization. Gate 0 is profit — if it doesn't make dollars, nothing else matters.
 argument-hint: "<strategy-id or expression description>"
 ---
 
@@ -8,7 +8,9 @@ Read DESIGN.md, METHODS.md, RETURNED.md, and the strategy's FTR if it exists.
 
 ## Audit Protocol
 
-Evaluate the strategy across five gates, in order. A failure at any gate is terminal — do not proceed.
+Evaluate the strategy across six gates, in order. A failure at any gate is terminal — do not proceed.
+
+0. **Profit Checkpoint** — Compute actual dollar PnL: `Annual net $ = (Capital × PnL% - TC × cost) / Years`. State explicitly: "Annual net profit: $X on $Y capital". Compare to thresholds: $500 min, $1000 quality, $2000 HC. If below minimum → MARGINAL regardless of Sharpe. Use `analysis/profit_reality_check.py` for futures-based estimates. Overlay signals (regime identifiers, not standalone trades) are exempt — judge them by portfolio improvement instead.
 
 1. **Signal Identity (SA-INV-10)** — Is the backtest function identical to the live function? Same code path, different data source? If separate implementations exist, stop. This is a bug.
 
@@ -27,12 +29,15 @@ Focus: $ARGUMENTS
 
 ## Output
 
-For each gate: PASS / CONCERN / RETURN with specific evidence.
+For each gate (0-5): PASS / CONCERN / RETURN with specific evidence.
+
+For Gate 0, always state: "Annual net profit: $X/year on $Y capital"
 
 Summary verdict:
-- **VALIDATED**: All 5 gates pass
+- **VALIDATED**: All 6 gates pass (including profit checkpoint)
 - **CONDITIONAL**: Passes with concerns (list what resolves them)
-- **RETURNED**: Failed a gate (identify which failure vocabulary mode applies)
+- **MARGINAL**: Gate 0 fails (<$500/year) — not worth trading regardless of other gates
+- **RETURNED**: Failed a gate 1-5 (identify which failure vocabulary mode applies)
 
 If CONDITIONAL: what single additional test would resolve?
 
